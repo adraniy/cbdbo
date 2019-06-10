@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import AppBar from "./appbar/appbar";
+import AppBar from "./appbar/AppBar";
 import {createMuiTheme} from '@material-ui/core/styles';
 import orange from '@material-ui/core/colors/orange';
 import lightGreen from '@material-ui/core/colors/lightGreen';
@@ -36,10 +36,14 @@ export default class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tabNum: 0
+            tabNum: 0,
+            action: 'usersAgreements'
         };
-        this.tabChange = (event, tabNum) => {
-            this.setState({tabNum});
+        this.tabChange = (event, tabNum, action) => {
+            this.setState({tabNum, action});
+        }
+        this.actionChange = (action) => {
+            this.setState({action});
         }
     }
 
@@ -49,9 +53,9 @@ export default class App extends React.Component {
             <ThemeProvider theme={theme}>
                 <div>
                     <AppBar value={tabNum} handleChange={this.tabChange}/>
-                    {tabNum === 0 && <span>0</span>}
-                    {tabNum === 1 && <span>1</span>}
-                    {tabNum === 2 && <span>2</span>}
+                    {tabNum === 0 && <span>{this.state.action}</span>}
+                    {tabNum === 1 && <span>{this.state.action}</span>}
+                    {tabNum === 2 && <span>{this.state.action}</span>}
                 </div>
             </ThemeProvider>
         );
