@@ -78,10 +78,10 @@ export class AppBar extends React.Component {
                         horizontal: "center"
                     }}
                 >
-                    <MenuItem onClick={() => this.handleMenuItemClick("usersAgreements")}>
+                    <MenuItem disabled onClick={() => this.handleMenuItemClick("usersAgreements")}>
                         Список договоров физ.лиц
                     </MenuItem>
-                    <MenuItem disabled onClick={() => this.handleMenuItemClick("companyAgreements")}>
+                    <MenuItem  onClick={() => this.handleMenuItemClick("companyAgreements")}>
                         Список договоров юр.лиц
                     </MenuItem>
                     <MenuItem  disabled onClick={() => this.handleMenuItemClick("requests")}>

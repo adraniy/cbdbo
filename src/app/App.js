@@ -5,6 +5,7 @@ import {createMuiTheme} from '@material-ui/core/styles';
 import orange from '@material-ui/core/colors/orange';
 import lightGreen from '@material-ui/core/colors/lightGreen';
 import {ThemeProvider} from '@material-ui/styles';
+import CompanyAgreements from "./companyAgreemets/CompanyAgreements";
 
 const theme = createMuiTheme({
     palette: {
@@ -17,13 +18,18 @@ const theme = createMuiTheme({
                 backgroundColor: '#fafbfa'
             }
         },
-        MuiButtonBase:{
-            root:{
+        MuiButtonBase: {
+            root: {
                 textTransform: "none"
             }
         },
-        MuiTab:{
-            root:{
+        MuiButton: {
+            label: {
+                textTransform: "none"
+            }
+        },
+        MuiTab: {
+            root: {
                 textTransform: "none",
                 minWidth: "20px !important"
             }
@@ -37,11 +43,11 @@ export default class App extends React.Component {
         super(props);
         this.state = {
             tabNum: 0,
-            action: 'usersAgreements'
+            action: 'companyAgreements'
         };
         this.tabChange = (event, tabNum, action) => {
             this.setState({tabNum, action});
-        }
+        };
         this.actionChange = (action) => {
             this.setState({action});
         }
@@ -49,13 +55,15 @@ export default class App extends React.Component {
 
     render() {
         let tabNum = this.state.tabNum;
+        let action = this.state.action;
         return (
             <ThemeProvider theme={theme}>
                 <div>
                     <AppBar value={tabNum} handleChange={this.tabChange}/>
-                    {tabNum === 0 && <span>{this.state.action}</span>}
-                    {tabNum === 1 && <span>{this.state.action}</span>}
-                    {tabNum === 2 && <span>{this.state.action}</span>}
+                    {action === 'companyAgreements' && <CompanyAgreements/>
+                    || (<span>{this.state.action}</span>)}
+                    {/* {tabNum && <span>{this.state.action}</span>}*/}
+
                 </div>
             </ThemeProvider>
         );
