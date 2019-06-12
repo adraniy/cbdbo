@@ -16,9 +16,13 @@ import FormatListBulleted from "@material-ui/icons/FormatListBulleted";
 import Edit from "@material-ui/icons/Edit";
 import TextField from "@material-ui/core/TextField";
 import IconButton from "@material-ui/core/IconButton";
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux'
+import * as actions from '../redux/actions'
+import {NewInvestorDialog} from "../newInvestor/newInvestorModal";
 
 
-export default class CompanyAgreementsPanel extends React.Component {
+export class CompanyAgreementsPanel extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -57,7 +61,7 @@ export default class CompanyAgreementsPanel extends React.Component {
                     </Select>
                 </FormControl>
                 <FormControl margin={"normal"} style={{paddingLeft: "10px"}}>
-                    <Button variant={"text"}><AddIcon style={{color: 'green'}}/> Новый инвестор</Button>
+                    <Button variant={"text"} onClick={this.props.actions.toggleInvestorDialog} ><AddIcon style={{color: 'green'}}/> Новый инвестор</Button>
                 </FormControl>
                 <FormControl margin={"normal"} style={{paddingLeft: "10px"}}>
                     <Button variant={"text"}><ViewAgenda/> Просмотреть</Button>
@@ -143,3 +147,11 @@ export default class CompanyAgreementsPanel extends React.Component {
         </div>
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    }
+}
+
+export default connect(null, mapDispatchToProps)(CompanyAgreementsPanel);

@@ -6,6 +6,16 @@ import orange from '@material-ui/core/colors/orange';
 import lightGreen from '@material-ui/core/colors/lightGreen';
 import {ThemeProvider} from '@material-ui/styles';
 import CompanyAgreements from "./companyAgreemets/CompanyAgreements";
+import {applyMiddleware, createStore} from 'redux'
+import {Provider} from 'react-redux'
+import rootReducer from './redux/reducers';
+import thunk from 'redux-thunk';
+
+import NewInvestorDialog from "./newInvestor/newInvestorModal";
+
+const store = createStore(rootReducer,
+    applyMiddleware(thunk)
+);
 
 const theme = createMuiTheme({
     palette: {
@@ -58,13 +68,14 @@ export default class App extends React.Component {
         let action = this.state.action;
         return (
             <ThemeProvider theme={theme}>
-                <div>
-                    <AppBar value={tabNum} handleChange={this.tabChange}/>
-                    {action === 'companyAgreements' && <CompanyAgreements/>
-                    || (<span>{this.state.action}</span>)}
-                    {/* {tabNum && <span>{this.state.action}</span>}*/}
-
-                </div>
+                <Provider store={store}>
+                    <div>
+                        <AppBar value={tabNum} handleChange={this.tabChange}/>
+                        {action === 'companyAgreements' && <CompanyAgreements/>
+                        || (<span>{this.state.action}</span>)}
+                        <NewInvestorDialog/>
+                    </div>
+                </Provider>
             </ThemeProvider>
         );
     }
