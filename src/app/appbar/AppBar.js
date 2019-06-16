@@ -43,7 +43,7 @@ export class AppBar extends React.Component {
         const open = Boolean(this.state.anchorEl);
         return (
             <MuiAppBar position="static">
-                <Toolbar>
+                <Toolbar style={{minHeight: '48px'}}>
                     <Typography variant="h6" style={{display: "flex", paddingRight: '20px'}}>
                         <Logo/>
                     </Typography>

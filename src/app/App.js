@@ -38,7 +38,15 @@ const theme = createMuiTheme({
                 textTransform: "none"
             }
         },
+        MuiFormControl:{
+            root:{
+                color: '#757575'
+            }
+        },
         MuiTab: {
+            labelIcon:{
+                minHeight: '48px'
+            },
             root: {
                 textTransform: "none",
                 minWidth: "20px !important"

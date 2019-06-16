@@ -19,7 +19,6 @@ import IconButton from "@material-ui/core/IconButton";
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux'
 import * as actions from '../redux/actions'
-import {NewInvestorDialog} from "../newInvestor/newInvestorModal";
 
 
 export class CompanyAgreementsPanel extends React.Component {
@@ -42,9 +41,8 @@ export class CompanyAgreementsPanel extends React.Component {
 
     render() {
         const open = Boolean(this.state.anchorEl);
-        return <div>
-            <div>
-                <FormControl disabled margin={"normal"} style={{paddingLeft: "10px"}}>
+        return <div style={{paddingTop: '10px'}}>
+                <FormControl disabled  style={{paddingLeft: "10px"}}>
                     <Select
                         value={"Юридическое лицо"}
                         onChange={() => {
@@ -52,7 +50,7 @@ export class CompanyAgreementsPanel extends React.Component {
                         <MenuItem disabled value={"Юридическое лицо"}>Юридическое лицо</MenuItem>
                     </Select>
                 </FormControl>
-                <FormControl margin={"normal"} style={{paddingLeft: "10px"}}>
+                <FormControl  style={{paddingLeft: "10px"}}>
                     <Select
                         value={"Мой фильтр"}
                         onChange={() => {
@@ -60,24 +58,25 @@ export class CompanyAgreementsPanel extends React.Component {
                         <MenuItem value={"Мой фильтр"}>Мой фильтр</MenuItem>
                     </Select>
                 </FormControl>
-                <FormControl margin={"normal"} style={{paddingLeft: "10px"}}>
-                    <Button variant={"text"} onClick={this.props.actions.toggleInvestorDialog} ><AddIcon style={{color: 'green'}}/> Новый инвестор</Button>
+                <FormControl  style={{paddingLeft: "10px"}}>
+                    <Button variant={"text"} onClick={this.props.actions.toggleInvestorDialog}><AddIcon
+                        style={{color: 'green'}}/> Новый инвестор</Button>
                 </FormControl>
-                <FormControl margin={"normal"} style={{paddingLeft: "10px"}}>
+                <FormControl style={{paddingLeft: "10px"}}>
                     <Button variant={"text"}><ViewAgenda/> Просмотреть</Button>
                 </FormControl>
-                <FormControl margin={"normal"} style={{paddingLeft: "10px"}}>
+                <FormControl  style={{paddingLeft: "10px"}}>
                     <Button variant={"text"}><Refresh/> Обновить</Button>
                 </FormControl>
-                <FormControl margin={"normal"} style={{paddingLeft: "10px"}}>
+                <FormControl style={{paddingLeft: "10px"}}>
                     <Button variant={"text"}><Filter/> Фильтровать</Button>
                 </FormControl>
-                <FormControl margin={"normal"} style={{paddingLeft: "10px"}}>
+                <FormControl  style={{paddingLeft: "10px"}}>
                     <Button onClick={this.handleClick}> <Close
                         style={{color: 'red'}}/> Закрыть <ArrowDropDownIcon/></Button>
                 </FormControl>
-                {!this.state.showAll ? <FormControl  style={{paddingLeft: "10px"}}>
-                <IconButton style={{marginTop: '10px'}} onClick={() => this.setState({showAll: true})}><UnfoldMore/></IconButton>
+                {!this.state.showAll ? <FormControl style={{paddingLeft: "10px"}}>
+                    <IconButton style={{marginTop: '-6px'}} onClick={() => this.setState({showAll: true})}><UnfoldMore/></IconButton>
                 </FormControl> : null}
                 <Popover
                     open={open}
@@ -101,9 +100,8 @@ export class CompanyAgreementsPanel extends React.Component {
                         Инициатива клиента
                     </MenuItem>
                 </Popover>
-            </div>
+
             {this.state.showAll ? <div>
-                    <div>
                         <FormControl style={{paddingLeft: "10px"}}>
                             <Button> <FormatListBulleted/> Распорядители </Button>
                         </FormControl>
@@ -125,8 +123,6 @@ export class CompanyAgreementsPanel extends React.Component {
                         <FormControl style={{paddingLeft: "10px"}}>
                             <Button> <Edit/>Подключение услуг/сервисов<ArrowDropDownIcon/></Button>
                         </FormControl>
-                    </div>
-                    <div>
                         <FormControl style={{paddingLeft: "10px"}}>
                             <TextField label="Код инвестора"/>
                         </FormControl>
@@ -139,8 +135,8 @@ export class CompanyAgreementsPanel extends React.Component {
                         <FormControl style={{paddingLeft: "10px"}}>
                             <TextField label="Счет на FORTS"/>
                         </FormControl>
-                        <IconButton style={{marginTop: '10px'}} onClick={() => this.setState({showAll: false})}><UnfoldLess/></IconButton>
-                    </div>
+                        <IconButton style={{marginTop: '16px'}}
+                                    onClick={() => this.setState({showAll: false})}><UnfoldLess/></IconButton>
 
                 </div>
                 : null}
