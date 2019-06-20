@@ -6,6 +6,7 @@ import {withStyles} from '@material-ui/core/styles';
 import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import InvestorTab from "./tabs/investorTab";
+import StatementTab from "./tabs/statementTab";
 
 
 const styles = theme => ({});
@@ -24,6 +25,7 @@ export class Investor extends React.Component {
                 <Tab label="ДУ"/>
             </Tabs>
             {this.props.newInvestorTab === 0 && <InvestorTab />}
+            {this.props.newInvestorTab === 1 && <StatementTab />}
         </div>
     }
 }

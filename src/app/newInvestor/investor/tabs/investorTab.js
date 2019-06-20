@@ -17,6 +17,9 @@ import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
 import Table from "@material-ui/core/Table";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Checkbox from "@material-ui/core/Checkbox";
 
 
 const styles = theme => ({});
@@ -52,7 +55,9 @@ export class InvestorTab extends React.Component {
         return <div>
             <Grid container>
                 <Grid item xs={6}>                   {this.renderCategory()}</Grid>
-                <Grid item xs={6}><FormControl required style={{paddingLeft: "10px", flexDirection: 'row'}}>
+                <Grid item xs={3}></Grid>
+                <Grid item xs={3}>
+                    <FormControl required style={{paddingLeft: "10px", flexDirection: 'row'}}>
                     <TextField label="Код инвестора"/>
                     <Button> Получить код</Button>
                 </FormControl>
@@ -76,7 +81,7 @@ export class InvestorTab extends React.Component {
                         </FormControl>
                     </div>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} style={{padding: '0px 42px'}}>
                     <Grid  container>
                     <FormControl fullWidth>
                         <label>Список торговых систем:</label>
@@ -96,7 +101,6 @@ export class InvestorTab extends React.Component {
                     </FormControl>
                     </Grid>
                     <Grid container>
-
                         <Grid item xs={6} style={{padding: '5px 10px'}}>
                             <FormControl fullWidth><TextField label="Категория инвестора" value={'КОУР'}/></FormControl>
                             <FormControl fullWidth><TextField label="Доп. параметр риска на ВР МБ" /></FormControl>
@@ -106,6 +110,39 @@ export class InvestorTab extends React.Component {
                             <FormControl fullWidth><TextField label="Статус кавлифицированного онвестора" /></FormControl>
                         </Grid>
                     </Grid>
+                </Grid>
+                <Grid item xs={3} >
+                    <FormControl fullWidth><TextField label="Риск профиль"/></FormControl>
+                    <FormControl fullWidth><TextField label="Рекомендованные продукты" /></FormControl>
+                    <FormControl fullWidth>
+                        <InputLabel>Менеджер Брокерского подразделения (ПГР)</InputLabel>
+                        <Select value={""}></Select>
+                    </FormControl>
+                    <FormControl fullWidth>
+                        <InputLabel>Менеджер Розничного блока</InputLabel>
+                        <Select value={""}></Select>
+                    </FormControl>
+                </Grid>
+                <Grid item xs={3} style={{padding: '0px 10px'}}>
+                    <FormControl fullWidth><TextField label="Наименование подразделения" /></FormControl>
+                    <FormControl fullWidth><TextField label="Код" /></FormControl>
+                    <FormControl fullWidth><TextField label="Наличие служебной информации по договору" /></FormControl>
+                    <FormControl fullWidth><TextField multiline label="Служебная информации по договору" /></FormControl>
+                </Grid>
+                <Grid item xs={3} style={{padding: '0px 10px'}}>
+                    <FormControl fullWidth><Button>Выбрать подразделение</Button></FormControl>
+                </Grid>
+                <Grid item xs={3} style={{padding: '0px 10px'}}>
+                        <FormControlLabel
+                            control={<Checkbox disabled checked={false}  />}
+                            label="По акции банка"/>
+                        <Button>Проверить</Button>
+                    <FormControlLabel
+                        control={<Checkbox disabled checked={false}  />}
+                        label="Отправка извещения по EMail"/>
+                    <FormControlLabel
+                        control={<Checkbox checked={false}  />}
+                        label="Получение извещения в офисе"/>
                 </Grid>
             </Grid>
         </div>
