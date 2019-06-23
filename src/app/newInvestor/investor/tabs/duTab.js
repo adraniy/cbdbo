@@ -4,7 +4,6 @@ import {bindActionCreators} from 'redux'
 import * as actions from '../../../redux/actions'
 import {withStyles} from '@material-ui/core/styles';
 import Grid from "@material-ui/core/Grid";
-import {Duo} from "@material-ui/icons";
 import {select, text} from "../../../common/utils";
 import FormControl from "@material-ui/core/FormControl";
 import FormControlLabel from "@material-ui/core/FormControlLabel";

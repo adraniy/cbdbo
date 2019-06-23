@@ -27,8 +27,8 @@ export function datePicker(label, value, onChange, fullWidth){
     </FormControl>
 }
 
-export function text(label){
-    return <TextField label={label}/>
+export function text(label, value, onChange, fullWidth){
+    return <FormControl fullWidth={fullWidth} ><TextField label={label} value={value} onChange={onChange}/></FormControl>
 }
 
 export function select(label, value, onChange, items, required){
