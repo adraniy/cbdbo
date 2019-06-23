@@ -10,8 +10,11 @@ import {applyMiddleware, createStore} from 'redux'
 import {Provider} from 'react-redux'
 import rootReducer from './redux/reducers';
 import thunk from 'redux-thunk';
+import {MuiPickersUtilsProvider} from '@material-ui/pickers';
+import MomentUtils from '@date-io/moment';
 
 import NewInvestorDialog from "./newInvestor/newInvestorModal";
+import Paper from "@material-ui/core/Paper";
 
 const store = createStore(rootReducer,
     applyMiddleware(thunk)
@@ -38,18 +41,50 @@ const theme = createMuiTheme({
                 textTransform: "none"
             }
         },
-        MuiFormControl:{
-            root:{
-                color: '#757575'
+        MuiFormControl: {
+            root: {
+                color: '#757575',
+                '&.noLabel': {
+                    '& label + .MuiInput-formControl':{
+                        marginTop: 0
+                    }
+                }
+            }
+        },
+        MuiTableCell: {
+            root: {
+                borderBottom: 'none'
+            },
+            head: {
+                borderBottom: '1px solid #757575',
+                fontWeight: 'bold',
+                fontSize: '14px',
+                padding: "14px 24px 14px 16px !important"
+            },
+            sizeSmall: {
+                padding: '0 16px'
             }
         },
         MuiTab: {
-            labelIcon:{
+            labelIcon: {
                 minHeight: '48px'
             },
             root: {
                 textTransform: "none",
                 minWidth: "20px !important"
+            }
+        },
+        MuiDialogContent: {
+            root: {
+                padding: '8px'
+            }
+        },
+        MuiCheckbox: {
+            root: {
+                '& .MuiSvgIcon-root': {
+                    width: '18px',
+                    height: '18px'
+                }
             }
         }
     }
@@ -77,12 +112,16 @@ export default class App extends React.Component {
         return (
             <ThemeProvider theme={theme}>
                 <Provider store={store}>
-                    <div>
-                        <AppBar value={tabNum} handleChange={this.tabChange}/>
-                        {action === 'companyAgreements' && <CompanyAgreements/>
-                        || (<span>{this.state.action}</span>)}
-                        <NewInvestorDialog/>
-                    </div>
+                    <MuiPickersUtilsProvider utils={MomentUtils}>
+                        <div style={{height: '100%'}}>
+                            <AppBar value={tabNum} handleChange={this.tabChange}/>
+                            <Paper style={{height: '100%'}}>
+                                {action === 'companyAgreements' && <CompanyAgreements/>
+                                || (<span>{this.state.action}</span>)}
+                                <NewInvestorDialog/>
+                            </Paper>
+                        </div>
+                    </MuiPickersUtilsProvider>
                 </Provider>
             </ThemeProvider>
         );

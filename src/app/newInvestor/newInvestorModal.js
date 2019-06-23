@@ -10,11 +10,11 @@ import * as actions from '../redux/actions'
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from '@material-ui/icons/Close';
 import {withStyles} from '@material-ui/core/styles';
-import InvestorPanel from "./inverstorPanel";
 import Investor from "./investor/investor";
 import {ReactComponent as Logo} from '../appbar/logo.svg';
 import Typography from "@material-ui/core/Typography";
 import Toolbar from "@material-ui/core/Toolbar";
+import Paper from "@material-ui/core/Paper";
 
 const styles = theme => ({
     root: {
@@ -33,15 +33,17 @@ export class NewInvestorDialog extends React.Component {
                         <Logo/>
                         <span style={{lineHeight: '2.5'}}> Договор брокерского обслуживания</span>
                     </Typography>
-                    <IconButton style={{position: 'absolute', right: 0}} onClick={this.props.actions.toggleInvestorDialog}>
+                    <IconButton style={{position: 'absolute', right: 0}}
+                                onClick={this.props.actions.toggleInvestorDialog}>
                         <CloseIcon/>
                     </IconButton>
                 </Toolbar>
             </DialogTitle>
             <DialogContent>
                 <DialogContent>
-                    <InvestorPanel/>
-                    <Investor />
+                    <Paper style={{height: '100%'}}>
+                        <Investor/>
+                    </Paper>
                 </DialogContent>
             </DialogContent>
             <DialogActions>
