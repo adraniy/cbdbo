@@ -31,8 +31,8 @@ export function text(label, value, onChange, fullWidth){
     return <FormControl fullWidth={fullWidth} ><TextField label={label} value={value} onChange={onChange}/></FormControl>
 }
 
-export function select(label, value, onChange, items, required){
-    return <FormControl fullWidth  required={required}>
+export function select(label, value, onChange, items, required, noFullWidth){
+    return <FormControl fullWidth={!noFullWidth} style={{minWidth: '195px'}} required={required}>
         <InputLabel>{label}</InputLabel>
         <Select value={value || ""}
                 onChange={onChange || (()=> {})}>

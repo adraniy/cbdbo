@@ -23,49 +23,53 @@ const styles = theme => ({});
 
 
 export class DuTab extends React.Component {
+    constructor(props) {
+        super(props);
+
+    }
 
     render() {
         return <div>
             <Grid container>
                 <Grid item xs={6}>
-                    <FormControl  fullWidth >
-                    {select('Тип актива')}
+                    <FormControl fullWidth>
+                        {select('Тип актива', this.props.type, this.props.actions.setDuType)}
                     </FormControl>
                 </Grid>
                 <Grid item xs={6} style={{paddingLeft: "20px"}}>
-                    <FormControl  fullWidth >
-                        {text('ИНН фонда')}
+                    <FormControl fullWidth>
+                        {text('ИНН фонда', this.props.innFond, this.props.actions.setDuFondInn)}
                     </FormControl>
                 </Grid>
                 <Grid item xs={4}>
-                    <FormControl  fullWidth>
-                    {text('Данные об инвестиционном портфеле')}
+                    <FormControl fullWidth>
+                        {text('Данные об инвестиционном портфеле',  this.props.portfolioData, this.props.actions.setDuPortfolioData)}
                     </FormControl>
                 </Grid>
                 <Grid item xs={4} style={{paddingLeft: "20px"}}>
-                    <FormControl  fullWidth >
-                    {text('Номер правил ПИФ')}
+                    <FormControl fullWidth>
+                        {text('Номер правил ПИФ', this.props.numberPif ,  this.props.actions.setDuNumberPif)}
                     </FormControl>
                 </Grid>
                 <Grid item xs={4} style={{paddingLeft: "20px"}}>
                     <FormControl fullWidth>
                         <FormControlLabel
-                            control={<Checkbox color={"primary"}  checked={false}/>}
+                            control={<Checkbox color={"primary"} checked={this.props.group} onChange={this.props.actions.setDuGroup}/>}
                             label={'Признак группы'}/> </FormControl>
                 </Grid>
-                <Typography style={{marginTop:'20px'}} variant="h6">Учредители/Выгодопреобретатели</Typography>
-                <Grid item xs={12} >
+                <Typography style={{marginTop: '20px'}} variant="h6">Учредители/Выгодопреобретатели</Typography>
+                <Grid item xs={12}>
                     <Table>
                         <TableHead>
                             <TableRow>
-                                <TableCell >Тип лица</TableCell>
-                                <TableCell >ФИО/Наименование</TableCell>
-                                <TableCell >Тип Д.У.П.</TableCell>
-                                <TableCell >Серия Д.У.П.</TableCell>
-                                <TableCell >Номер</TableCell>
-                                <TableCell >ИНН</TableCell>
-                                <TableCell >ОГРН</TableCell>
-                                <TableCell >ОГРН(дата)</TableCell>
+                                <TableCell>Тип лица</TableCell>
+                                <TableCell>ФИО/Наименование</TableCell>
+                                <TableCell>Тип Д.У.П.</TableCell>
+                                <TableCell>Серия Д.У.П.</TableCell>
+                                <TableCell>Номер</TableCell>
+                                <TableCell>ИНН</TableCell>
+                                <TableCell>ОГРН</TableCell>
+                                <TableCell>ОГРН(дата)</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -81,8 +85,8 @@ export class DuTab extends React.Component {
                             </TableRow>
                         </TableBody>
                     </Table>
-                    <IconButton > <Add /></IconButton>
-                    <IconButton > <Remove /></IconButton>
+                    <IconButton> <Add/></IconButton>
+                    <IconButton> <Remove/></IconButton>
                 </Grid>
             </Grid>
         </div>
@@ -91,7 +95,11 @@ export class DuTab extends React.Component {
 
 const mapStateToProps = function (state) {
     return {
-        investorTab: state.main.investorTab
+        type: state.main.duTab.type,
+        innFond: state.main.duTab.innFond,
+        portfolioData: state.main.duTab.portfolioData,
+        numberPif: state.main.duTab.numberPif,
+        group: state.main.duTab.group,
     }
 };
 

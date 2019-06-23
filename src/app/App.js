@@ -71,7 +71,8 @@ const theme = createMuiTheme({
             },
             root: {
                 textTransform: "none",
-                minWidth: "20px !important"
+                minWidth: "20px !important",
+                maxWidth: '300px'
             }
         },
         MuiDialogContent: {
@@ -80,6 +81,14 @@ const theme = createMuiTheme({
             }
         },
         MuiCheckbox: {
+            root: {
+                '& .MuiSvgIcon-root': {
+                    width: '18px',
+                    height: '18px'
+                }
+            }
+        },
+        MuiRadio: {
             root: {
                 '& .MuiSvgIcon-root': {
                     width: '18px',

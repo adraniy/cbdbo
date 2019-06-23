@@ -7,7 +7,7 @@ import Tab from "@material-ui/core/Tab";
 import Tabs from "@material-ui/core/Tabs";
 import InvestorTab from "./tabs/investorTab";
 import StatementTab from "./tabs/statements/statementTab";
-import QuestionnaireTab from "./tabs/questionnaireTab";
+import QuestionnaireTab from "./tabs/questionnaire/questionnaireTab";
 import DetailsTab from "./tabs/detailsTab";
 import TailingsTab from "./tabs/tailingsTab";
 import FatcaTab from "./tabs/fatcaTab";
