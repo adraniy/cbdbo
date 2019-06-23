@@ -24,7 +24,7 @@ const styles = theme => ({});
 export class InvestorPanel extends React.Component {
 
     render() {
-        return <div style={{marginLeft: '-20px'}}>
+        return <div>
             <div>
                 <FormControl  style={{paddingLeft: "10px"}}>
                     <Button disabled variant={"text"} onClick={doNothing()}><AddIcon/> Создать экземпляр</Button>

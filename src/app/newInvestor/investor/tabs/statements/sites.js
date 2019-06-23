@@ -57,7 +57,7 @@ export class Sites extends React.Component {
                         label="Поручения на ОТС РЕПО овернат"/>
                 </Grid>
                 <Grid item xs={4}>
-                    <Button>Редактировать</Button>
+                    <Button color="primary" >Редактировать</Button>
                 </Grid>
                 <Grid item xs={6}>
                     <Grid container>

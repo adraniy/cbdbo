@@ -59,7 +59,7 @@ export class InvestorTab extends React.Component {
                 <Grid item xs={3}>
                     <FormControl required style={{paddingLeft: "10px", flexDirection: 'row'}}>
                     <TextField label="Код инвестора"/>
-                    <Button> Получить код</Button>
+                    <Button color="primary"> Получить код</Button>
                 </FormControl>
                 </Grid>
                 <Grid item xs={3}>
