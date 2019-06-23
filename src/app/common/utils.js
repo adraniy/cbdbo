@@ -20,8 +20,9 @@ export function datePicker(label, value, onChange, fullWidth){
     return <FormControl fullWidth={fullWidth} >
         <DatePicker
         label={label}
+        clearable
         format="DD.MM.YYYY"
-        value={value}
+        value={value || null}
         onChange={onChange}/>
     </FormControl>
 }
