@@ -99,7 +99,22 @@ let initial = {
         name: "",
         shortName: "",
         nameEn: "",
-        shortNameEn: ""
+        shortNameEn: "",
+        inn: "",
+        kpp: "",
+        bik: "",
+        okpo: "",
+        okato: "",
+        ogrn: "",
+        okved: "",
+        pName: "",
+        psName: "",
+        pfName: "",
+        bases: "",
+        period: "",
+        unlimited: "",
+        creditInstitution: "",
+        additional: "",
     }
 };
 
@@ -126,6 +141,21 @@ export const SET_QT_CD_NAME = 'SET_QT_CD_NAME';
 export const SET_QT_CD_SHORT_NAME = 'SET_QT_CD_SHORT_NAME';
 export const SET_QT_CD_NAME_EN = 'SET_QT_CD_NAME_EN';
 export const SET_QT_CD_SHORT_NAME_EN = 'SET_QT_CD_SHORT_NAME_EN';
+export const SET_QT_CD_INN = 'SET_QT_CD_INN';
+export const SET_QT_CD_KPP = 'SET_QT_CD_KPP';
+export const SET_QT_CD_BIK = 'SET_QT_CD_BIK';
+export const SET_QT_CD_OKPO = 'SET_QT_CD_OKPO';
+export const SET_QT_CD_OKATO = 'SET_QT_CD_OKATO';
+export const SET_QT_CD_OGRN = 'SET_QT_CD_OGRN';
+export const SET_QT_CD_OKVED = 'SET_QT_CD_OKVED';
+export const SET_QT_CD_PNAME = 'SET_QT_CD_PNAME';
+export const SET_QT_CD_PSNAME = 'SET_QT_CD_PSNAME';
+export const SET_QT_CD_PFNAME = 'SET_QT_CD_PFNAME';
+export const SET_QT_CD_BASES = 'SET_QT_CD_BASES';
+export const SET_QT_CD_PERIOD = 'SET_QT_CD_PERIOD';
+export const SET_QT_CD_UNLIMITED = 'SET_QT_CD_UNLIMITED';
+export const SET_QT_CD_CREDIT_INSTITUTION = 'SET_QT_CD_CREDIT_INSTITUTION';
+export const SET_QT_CD_ADDITIONAL = 'SET_QT_CD_ADDITIONAL';
 
 export function main(state = initial, action) {
     switch (action.type) {
@@ -136,6 +166,66 @@ export function main(state = initial, action) {
         case SET_QT_CD_NAME:
             return {
                 ...state, qtCommonData: {...state.qtCommonData, name: action.data}
+            };
+        case SET_QT_CD_ADDITIONAL:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, additional: action.data}
+            };
+        case SET_QT_CD_UNLIMITED:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, unlimited: action.data}
+            };
+        case SET_QT_CD_CREDIT_INSTITUTION:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, creditInstitution: action.data}
+            };
+        case SET_QT_CD_PERIOD:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, period: action.data}
+            };
+        case SET_QT_CD_BASES:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, bases: action.data}
+            };
+        case SET_QT_CD_PNAME:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, pName: action.data}
+            };
+        case SET_QT_CD_PSNAME:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, psName: action.data}
+            };
+        case SET_QT_CD_PFNAME:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, pfName: action.data}
+            };
+        case SET_QT_CD_OKATO:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, okato: action.data}
+            };
+        case SET_QT_CD_OGRN:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, ogrn: action.data}
+            };
+        case SET_QT_CD_OKVED:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, okved: action.data}
+            };
+        case SET_QT_CD_BIK:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, bik: action.data}
+            };
+        case SET_QT_CD_OKPO:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, okpo: action.data}
+            };
+        case SET_QT_CD_INN:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, inn: action.data}
+            };
+        case SET_QT_CD_KPP:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, kpp: action.data}
             };
         case SET_QT_CD_SHORT_NAME:
             return {

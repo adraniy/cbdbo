@@ -44,22 +44,22 @@ export class CommonData extends React.Component {
                 </Grid>
                 <Grid item xs={6}>
                     <FormControl>
-                        <TextField required label={'ИНН'} value={this.props.shortNameEn}
-                                   onChange={this.props.actions.setQtCdShortNameEn}/>
-                        <TextField required label={'КПП'} value={this.props.shortNameEn}
-                                   onChange={this.props.actions.setQtCdShortNameEn}/>
-                        <TextField label={'БИК'} value={this.props.shortNameEn}
-                                   onChange={this.props.actions.setQtCdShortNameEn}/>
-                        <TextField label={'ОКПО'} value={this.props.shortNameEn}
-                                   onChange={this.props.actions.setQtCdShortNameEn}/>
+                        <TextField required label={'ИНН'} value={this.props.inn}
+                                   onChange={this.props.actions.setQtCdInn}/>
+                        <TextField required label={'КПП'} value={this.props.kpp}
+                                   onChange={this.props.actions.setQtCdKpp}/>
+                        <TextField label={'БИК'} value={this.props.bik}
+                                   onChange={this.props.actions.setQtCdBik}/>
+                        <TextField label={'ОКПО'} value={this.props.okpo}
+                                   onChange={this.props.actions.setQtCdOkpo}/>
                     </FormControl>
                     <FormControl style={{paddingLeft: '20px'}}>
-                        <TextField label={'ОКАТО'} value={this.props.shortNameEn}
-                                   onChange={this.props.actions.setQtCdShortNameEn}/>
-                        <TextField required label={'ОГРН'} value={this.props.shortNameEn}
-                                   onChange={this.props.actions.setQtCdShortNameEn}/>
-                        <TextField required label={'ОКВЕД'} value={this.props.shortNameEn}
-                                   onChange={this.props.actions.setQtCdShortNameEn}/>
+                        <TextField label={'ОКАТО'} value={this.props.okato}
+                                   onChange={this.props.actions.setQtCdOkato}/>
+                        <TextField required label={'ОГРН'} value={this.props.ogrn}
+                                   onChange={this.props.actions.setQtCdOgrn}/>
+                        <TextField required label={'ОКВЕД'} value={this.props.okved}
+                                   onChange={this.props.actions.setQtCdOkved}/>
                         {select('Юристикция')}
                     </FormControl>
                 </Grid>
@@ -67,28 +67,25 @@ export class CommonData extends React.Component {
                     <Grid container>
                         <Grid item xs={6}>
                             <FormControl>
-                                <TextField label={'Фамилия представителя'} value={this.props.shortNameEn}
-                                           onChange={this.props.actions.setQtCdShortNameEn}/>
-                                <TextField label={'Имя представителя'} value={this.props.shortNameEn}
-                                           onChange={this.props.actions.setQtCdShortNameEn}/>
-                                <TextField label={'Отчество представителя'} value={this.props.shortNameEn}
-                                           onChange={this.props.actions.setQtCdShortNameEn}/>
+                                <TextField label={'Фамилия представителя'} value={this.props.psName}
+                                           onChange={this.props.actions.setQtCdPsName}/>
+                                <TextField label={'Имя представителя'} value={this.props.pName}
+                                           onChange={this.props.actions.setQtCdPName}/>
+                                <TextField label={'Отчество представителя'} value={this.props.pfName}
+                                           onChange={this.props.actions.setQtCdPfName
+                                           }/>
                             </FormControl>
                         </Grid>
                         <Grid item xs={6}>
                             <FormControl fullWidth>
-                                <TextField label={'Основание представителя'} value={this.props.shortNameEn}
-                                           onChange={this.props.actions.setQtCdShortNameEn}/>
-                                {datePicker('Срок полномочий')}
-                                <FormControlLabel control={<Checkbox color={"primary"}
-                                                                     onChange={() => {
-                                                                     }}
-                                                                     checked={false}/>}
+                                <TextField label={'Основание представителя'} value={this.props.bases}
+                                           onChange={this.props.actions.setQtCdBases}/>
+                                {datePicker('Срок полномочий', this.props.period, this.props.actions.setQtCdPeriod)}
+                                <FormControlLabel control={<Checkbox color={"primary"} checked={this.props.unlimited}
+                                                                     onChange={this.props.actions.setQtCdUnlimited}/>}
                                                   label={'Бессрочно'}/>
-                                                  <FormControlLabel control={<Checkbox color={"primary"}
-                                                                     onChange={() => {
-                                                                     }}
-                                                                     checked={false}/>}
+                                <FormControlLabel control={<Checkbox color={"primary"} checked={this.props.creditInstitution}
+                                                                     onChange={this.props.actions.setQtCdCreditInstitution}/>}
                                                   label={'Кредитная организация'}/>
                             </FormControl>
                         </Grid>
@@ -96,8 +93,9 @@ export class CommonData extends React.Component {
                     </Grid>
                 </Grid>
                 <Grid item xs={12}>
-                    <FormControl fullWidth>  <TextField multiline rows={3} label={'Дополнителная информация'} value={this.props.shortNameEn}
-                                                        onChange={this.props.actions.setQtCdShortNameEn}/></FormControl>
+                    <FormControl fullWidth> <TextField multiline rows={3} label={'Дополнителная информация'}
+                                                       value={this.props.additional}
+                                                       onChange={this.props.actions.setQtCdAdditional}/></FormControl>
                 </Grid>
             </Grid>
         </div>
@@ -110,6 +108,21 @@ const mapStateToProps = function (state) {
         shortName: state.main.qtCommonData.shortName,
         nameEn: state.main.qtCommonData.nameEn,
         shortNameEn: state.main.qtCommonData.shortNameEn,
+        inn: state.main.qtCommonData.inn,
+        kpp: state.main.qtCommonData.kpp,
+        bik: state.main.qtCommonData.bik,
+        okpo: state.main.qtCommonData.okpo,
+        okato: state.main.qtCommonData.okato,
+        ogrn: state.main.qtCommonData.ogrn,
+        okved: state.main.qtCommonData.okved,
+        pName: state.main.qtCommonData.pName,
+        psName: state.main.qtCommonData.psName,
+        pfName: state.main.qtCommonData.pfName,
+        bases: state.main.qtCommonData.bases,
+        period: state.main.qtCommonData.period,
+        creditInstitution: state.main.qtCommonData.creditInstitution,
+        unlimited: state.main.qtCommonData.unlimited,
+        additional: state.main.qtCommonData.additional
     }
 };
 

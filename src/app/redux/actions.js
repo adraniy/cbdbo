@@ -11,11 +11,23 @@ import {
     SET_GIIN,
     SET_INVESTOR_CATEGORY,
     SET_INVESTOR_DIALOG_OPEN,
-    SET_INVESTOR_DIALOG_TAB,
+    SET_INVESTOR_DIALOG_TAB, SET_QT_CD_ADDITIONAL,
+    SET_QT_CD_BASES,
+    SET_QT_CD_BIK, SET_QT_CD_CREDIT_INSTITUTION,
+    SET_QT_CD_INN,
+    SET_QT_CD_KPP,
     SET_QT_CD_NAME,
     SET_QT_CD_NAME_EN,
+    SET_QT_CD_OGRN,
+    SET_QT_CD_OKATO,
+    SET_QT_CD_OKPO,
+    SET_QT_CD_OKVED,
+    SET_QT_CD_PERIOD,
+    SET_QT_CD_PFNAME,
+    SET_QT_CD_PNAME,
+    SET_QT_CD_PSNAME,
     SET_QT_CD_SHORT_NAME,
-    SET_QT_CD_SHORT_NAME_EN,
+    SET_QT_CD_SHORT_NAME_EN, SET_QT_CD_UNLIMITED,
     SET_QT_CODE,
     SET_QT_DATE,
     SET_QT_INNER_TAB,
@@ -36,6 +48,66 @@ export function toggleInvestorDialog() {
 
 export function setQtCdName(e) {
     return {type: SET_QT_CD_NAME, data: e.target.value};
+}
+
+export function setQtCdUnlimited(e) {
+    return {type: SET_QT_CD_UNLIMITED, data: e.target.checked};
+}
+
+export function setQtCdCreditInstitution(e) {
+    return {type: SET_QT_CD_CREDIT_INSTITUTION, data: e.target.checked};
+}
+
+export function setQtCdAdditional(e) {
+    return {type: SET_QT_CD_ADDITIONAL, data: e.target.value};
+}
+
+export function setQtCdPeriod(e) {
+    return {type: SET_QT_CD_PERIOD, data: e};
+}
+
+export function setQtCdBases(e) {
+    return {type: SET_QT_CD_BASES, data: e.target.value};
+}
+
+export function setQtCdPName(e) {
+    return {type: SET_QT_CD_PNAME, data: e.target.value};
+}
+
+export function setQtCdPsName(e) {
+    return {type: SET_QT_CD_PSNAME, data: e.target.value};
+}
+
+export function setQtCdPfName(e) {
+    return {type: SET_QT_CD_PFNAME, data: e.target.value};
+}
+
+export function setQtCdOkato(e) {
+    return {type: SET_QT_CD_OKATO, data: e.target.value};
+}
+
+export function setQtCdOgrn(e) {
+    return {type: SET_QT_CD_OGRN, data: e.target.value};
+}
+
+export function setQtCdOkved(e) {
+    return {type: SET_QT_CD_OKVED, data: e.target.value};
+}
+
+export function setQtCdInn(e) {
+    return {type: SET_QT_CD_INN, data: e.target.value};
+}
+
+export function setQtCdBik(e) {
+    return {type: SET_QT_CD_BIK, data: e.target.value};
+}
+
+export function setQtCdOkpo(e) {
+    return {type: SET_QT_CD_OKPO, data: e.target.value};
+}
+
+export function setQtCdKpp(e) {
+    return {type: SET_QT_CD_KPP, data: e.target.value};
 }
 
 export function setQtCdShortName(e) {
