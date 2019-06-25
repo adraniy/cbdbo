@@ -46,6 +46,7 @@ export class QuestionnaireTab extends React.Component {
                         <Tab label="Виды связи"/>
                         <Tab label="Информационные сведения о клиенте"/>
                     </Tabs>
+                    <hr style={{margin: '0'}}/>
                     <div style={{marginTop: '10px'}}>
                         {this.props.questionnaireInnerTab === 0 && <CommonData/>}
                         {this.props.questionnaireInnerTab === 1 && <RegistrationData/>}

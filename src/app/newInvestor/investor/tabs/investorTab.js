@@ -136,7 +136,7 @@ export class InvestorTab extends React.Component {
                         <FormControlLabel
                             control={<Checkbox disabled checked={false}  />}
                             label="По акции банка"/>
-                        <Button>Проверить</Button>
+                        <Button color={"primary"}>Проверить</Button>
                     <FormControlLabel
                         control={<Checkbox disabled checked={false}  />}
                         label="Отправка извещения по EMail"/>
