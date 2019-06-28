@@ -9,16 +9,12 @@ import Refresh from "@material-ui/icons/Refresh"
 import Filter from "@material-ui/icons/FilterList"
 import Popover from "@material-ui/core/Popover";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-import UnfoldLess from "@material-ui/icons/UnfoldLess";
-import UnfoldMore from "@material-ui/icons/UnfoldMore";
-import Close from "@material-ui/icons/Close";
-import FormatListBulleted from "@material-ui/icons/FormatListBulleted";
-import Edit from "@material-ui/icons/Edit";
 import TextField from "@material-ui/core/TextField";
 import IconButton from "@material-ui/core/IconButton";
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux'
 import * as actions from '../redux/actions'
+import Close from "@material-ui/icons/Close";
 
 
 export class CompanyAgreementsPanel extends React.Component {
@@ -26,7 +22,7 @@ export class CompanyAgreementsPanel extends React.Component {
         super(props);
         this.state = {
             anchorEl: null,
-            showAll: false
+            showAll: false,
         };
         this.handleClick = (event) => {
             event.stopPropagation();
@@ -60,7 +56,7 @@ export class CompanyAgreementsPanel extends React.Component {
                 </FormControl>
                 <FormControl  style={{paddingLeft: "10px"}}>
                     <Button variant={"text"} onClick={this.props.actions.toggleInvestorDialog}><AddIcon
-                        style={{color: 'green'}}/> Новый инвестор</Button>
+                        color={"primary"} /> Новый инвестор</Button>
                 </FormControl>
                 <FormControl style={{paddingLeft: "10px"}}>
                     <Button variant={"text"}><ViewAgenda/> Просмотреть</Button>
@@ -75,9 +71,18 @@ export class CompanyAgreementsPanel extends React.Component {
                     <Button onClick={this.handleClick}> <Close
                         style={{color: 'red'}}/> Закрыть <ArrowDropDownIcon/></Button>
                 </FormControl>
-                {!this.state.showAll ? <FormControl style={{paddingLeft: "10px"}}>
-                    <IconButton style={{marginTop: '-6px'}} onClick={() => this.setState({showAll: true})}><UnfoldMore/></IconButton>
-                </FormControl> : null}
+            <FormControl style={{paddingLeft: "10px"}}>
+                <TextField label="Код инвестора"/>
+            </FormControl>
+            <FormControl style={{paddingLeft: "10px"}}>
+                <TextField label="Наименование"/>
+            </FormControl>
+            <FormControl style={{paddingLeft: "10px"}}>
+                <TextField label="E-Mail"/>
+            </FormControl>
+            <FormControl style={{paddingLeft: "10px"}}>
+                <TextField label="Счет на FORTS"/>
+            </FormControl>
                 <Popover
                     open={open}
                     anchorEl={this.state.anchorEl}
@@ -100,47 +105,7 @@ export class CompanyAgreementsPanel extends React.Component {
                         Инициатива клиента
                     </MenuItem>
                 </Popover>
-
-            {this.state.showAll ? <div>
-                        <FormControl style={{paddingLeft: "10px"}}>
-                            <Button> <FormatListBulleted/> Распорядители </Button>
-                        </FormControl>
-                        <FormControl style={{paddingLeft: "10px"}}>
-                            <Button> <FormatListBulleted/> Изменения </Button>
-                        </FormControl>
-                        <FormControl style={{paddingLeft: "10px"}}>
-                            <Button> <FormatListBulleted/> Доверенные лица </Button>
-                        </FormControl>
-                        <FormControl style={{paddingLeft: "10px"}}>
-                            <Button> <FormatListBulleted/>Степень риска </Button>
-                        </FormControl>
-                        <FormControl style={{paddingLeft: "10px"}}>
-                            <Button> <FormatListBulleted/>Служебные отметки</Button>
-                        </FormControl>
-                        <FormControl style={{paddingLeft: "10px"}}>
-                            <Button> <Edit/>Карточки и заявки по телефону <ArrowDropDownIcon/> </Button>
-                        </FormControl>
-                        <FormControl style={{paddingLeft: "10px"}}>
-                            <Button> <Edit/>Подключение услуг/сервисов<ArrowDropDownIcon/></Button>
-                        </FormControl>
-                        <FormControl style={{paddingLeft: "10px"}}>
-                            <TextField label="Код инвестора"/>
-                        </FormControl>
-                        <FormControl style={{paddingLeft: "10px"}}>
-                            <TextField label="Наименование"/>
-                        </FormControl>
-                        <FormControl style={{paddingLeft: "10px"}}>
-                            <TextField label="E-Mail"/>
-                        </FormControl>
-                        <FormControl style={{paddingLeft: "10px"}}>
-                            <TextField label="Счет на FORTS"/>
-                        </FormControl>
-                        <IconButton style={{marginTop: '16px'}}
-                                    onClick={() => this.setState({showAll: false})}><UnfoldLess/></IconButton>
-
-                </div>
-                : null}
-        </div>
+            </div>
     }
 }
 

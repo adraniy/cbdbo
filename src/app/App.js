@@ -15,6 +15,8 @@ import MomentUtils from '@date-io/moment';
 
 import NewInvestorDialog from "./newInvestor/newInvestorModal";
 import Paper from "@material-ui/core/Paper";
+import ManagersModal from "./managers/managersModel";
+import Manager from "./managers/manager";
 
 const store = createStore(rootReducer,
     applyMiddleware(thunk)
@@ -128,6 +130,8 @@ export default class App extends React.Component {
                                 {action === 'companyAgreements' && <CompanyAgreements/>
                                 || (<span>{this.state.action}</span>)}
                                 <NewInvestorDialog/>
+                                <ManagersModal />
+                                <Manager />
                             </Paper>
                         </div>
                     </MuiPickersUtilsProvider>

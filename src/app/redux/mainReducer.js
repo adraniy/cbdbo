@@ -1,8 +1,11 @@
 let initial = {
     investor: {},
     newInvestorDialogOpen: false,
+    managersDialogOpen: false,
+    managerDialogOpen: false,
     newInvestorTab: 0,
     statementInnerTab: 0,
+    newManagerTab: 0,
     investorTab: {
         category: null
     },
@@ -112,9 +115,16 @@ let initial = {
         pfName: "",
         bases: "",
         period: "",
-        unlimited: "",
-        creditInstitution: "",
+        unlimited: false,
+        creditInstitution: false,
         additional: "",
+    },
+    mQtCommonData: {
+        inn: "",
+        name: "",
+        sName: "",
+        fName: "",
+        useQtValues: true
     }
 };
 
@@ -156,12 +166,41 @@ export const SET_QT_CD_PERIOD = 'SET_QT_CD_PERIOD';
 export const SET_QT_CD_UNLIMITED = 'SET_QT_CD_UNLIMITED';
 export const SET_QT_CD_CREDIT_INSTITUTION = 'SET_QT_CD_CREDIT_INSTITUTION';
 export const SET_QT_CD_ADDITIONAL = 'SET_QT_CD_ADDITIONAL';
+export const SET_MANAGERS_DIALOG_OPEN = 'SET_MANAGERS_DIALOG_OPEN';
+export const SET_MANAGER_DIALOG_OPEN = 'SET_MANAGER_DIALOG_OPEN';
+export const SET_MANAGER_DIALOG_TAB = 'SET_MANAGER_DIALOG_TAB';
+
+export const SET_MQT_CD_NAME = 'SET_MQT_CD_NAME';
+export const SET_MQT_CD_SNAME = 'SET_MQT_CD_SNAME';
+export const SET_MQT_CD_FNAME = 'SET_MQT_CD_FNAME';
+export const SET_MQT_CD_INN = 'SET_MQT_CD_INN';
+export const SET_MQT_USE_QT_VALUES = 'SET_MQT_USE_QT_VALUES';
 
 export function main(state = initial, action) {
     switch (action.type) {
         case UPDATE_INVESTOR:
             return {
                 ...state, investor: action.data
+            };
+        case SET_MQT_CD_NAME:
+            return {
+                ...state, mQtCommonData: {...state.mQtCommonData, name: action.data}
+            };
+        case SET_MQT_CD_INN:
+            return {
+                ...state, mQtCommonData: {...state.mQtCommonData, inn: action.data}
+            };
+        case SET_MQT_USE_QT_VALUES:
+            return {
+                ...state, mQtCommonData: {...state.mQtCommonData, useQtValues: action.data}
+            };
+        case SET_MQT_CD_SNAME:
+            return {
+                ...state, mQtCommonData: {...state.mQtCommonData, sName: action.data}
+            };
+        case SET_MQT_CD_FNAME:
+            return {
+                ...state, mQtCommonData: {...state.mQtCommonData, fName: action.data}
             };
         case SET_QT_CD_NAME:
             return {
@@ -307,9 +346,21 @@ export function main(state = initial, action) {
             return {
                 ...state, newInvestorTab: action.data
             };
+        case SET_MANAGER_DIALOG_TAB:
+            return {
+                ...state, newManagerTab: action.data
+            };
         case SET_INVESTOR_DIALOG_OPEN:
             return {
                 ...state, newInvestorDialogOpen: action.data
+            };
+        case SET_MANAGERS_DIALOG_OPEN:
+            return {
+                ...state, managersDialogOpen: action.data
+            };
+        case SET_MANAGER_DIALOG_OPEN:
+            return {
+                ...state, managerDialogOpen: action.data
             };
         default:
             return state

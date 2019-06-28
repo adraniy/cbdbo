@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df5c1ed0-e528-46dc-a733-41ceae8e4c64" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/managers/manager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/managers/managerPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/managers/managersModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/managers/tabs/Base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/managers/tabs/questionnaire/address.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/managers/tabs/questionnaire/commonData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/managers/tabs/questionnaire/connections.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/managers/tabs/questionnaire/postAddress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/managers/tabs/questionnaire/questionnaireTab.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/investorTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/investorTab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/questionnaireTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/questionnaireTab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/registrationData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/registrationData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/appbar/AppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/appbar/AppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/companyAgreemets/CompanyAgreementsPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/companyAgreemets/CompanyAgreementsPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/redux/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/redux/mainReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/redux/mainReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,35 +30,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/questionnaireTab.js">
+        <entry file="file://$PROJECT_DIR$/src/app/managers/manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#1474#1685#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/investorTab.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="135" column="41" lean-forward="true" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
+            <state relative-caret-position="160">
+              <caret line="80" column="71" selection-start-line="80" selection-start-column="71" selection-end-line="80" selection-end-column="71" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/clientInfo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="28" column="89" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -55,51 +44,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/redux/actions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="60" column="33" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="33" />
+            <state relative-caret-position="349">
+              <caret line="223" column="30" selection-start-line="223" selection-start-column="16" selection-end-line="223" selection-end-column="30" />
               <folding>
-                <element signature="e#0#836#0" expanded="true" />
+                <element signature="e#0#1120#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/connections.js">
+        <entry file="file://$PROJECT_DIR$/src/app/managers/tabs/Base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="28" column="90" selection-start-line="28" selection-start-column="90" selection-end-line="28" selection-end-column="90" />
+            <state relative-caret-position="51">
+              <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/commonData.js">
+        <entry file="file://$PROJECT_DIR$/src/app/managers/tabs/questionnaire/commonData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="99" column="19" selection-start-line="19" selection-start-column="12" selection-end-line="99" selection-end-column="19" />
+            <state relative-caret-position="176">
+              <caret line="21" column="119" selection-start-line="21" selection-start-column="119" selection-end-line="21" selection-end-column="119" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#675#4982#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/accounts.js">
+        <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/statements/sites.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="28" column="87" selection-start-line="28" selection-start-column="87" selection-end-line="28" selection-end-column="87" />
+            <state relative-caret-position="218">
+              <caret line="51" column="81" selection-start-line="49" selection-start-column="20" selection-end-line="51" selection-end-column="81" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/detailsTab.js">
+        <entry file="file://$PROJECT_DIR$/src/app/common/component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="105" column="87" selection-start-line="101" selection-start-column="24" selection-end-line="105" selection-end-column="87" />
+            <state relative-caret-position="255">
+              <caret line="28" column="29" selection-end-line="38" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/managers/tabs/questionnaire/questionnaireTab.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -110,21 +110,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/redux/mainReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="160" column="26" lean-forward="true" selection-start-line="160" selection-start-column="26" selection-end-line="160" selection-end-column="26" />
+            <state relative-caret-position="222">
+              <caret line="136" column="49" selection-start-line="136" selection-start-column="49" selection-end-line="136" selection-end-column="49" />
+              <folding>
+                <element signature="e#263#3621#0" />
+                <element signature="e#3634#3751#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../../../cbdbo/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/registrationData.js">
+        <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/commonData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+            <state relative-caret-position="145">
+              <caret line="83" column="116" selection-start-line="83" selection-start-column="107" selection-end-line="83" selection-end-column="116" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#753#797#0" />
-                <element signature="e#786#1002#0" />
               </folding>
             </state>
           </provider>
@@ -142,29 +156,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>root</find>
-      <find>8px 24px</find>
-      <find>MuiCheckbox</find>
-      <find>&lt;Tabl</find>
-      <find>FormControlLabel</find>
-      <find>select</find>
-      <find>mul</find>
-      <find>changeCategory</find>
-      <find>MuiFormControl</find>
-      <find>MuiTableCell</find>
-      <find>&lt;Ch</find>
-      <find>sec</find>
-      <find>&lt;Date</find>
-      <find>selectedDate</find>
-      <find>methodsOfTransmission</find>
-      <find>changeMethodToGenerateIncome</find>
-      <find>&lt;Te</find>
-      <find>&lt;Button</find>
-      <find>Реда</find>
-      <find>&lt;Table</find>
-      <find>пол</find>
-      <find>&lt;TAb</find>
-      <find>Редак</find>
       <find>&lt;date</find>
       <find>statementInnerTab</find>
       <find>questionnaireInnerTab</find>
@@ -172,9 +163,37 @@
       <find>&lt;Check</find>
       <find>OKVED</find>
       <find>Проверить</find>
+      <find>Drowe</find>
+      <find>Draw</find>
+      <find>FormatListBulleted</find>
+      <find>ForwardRef</find>
+      <find>SvgIcon</find>
+      <find>SET_INVESTOR_DIALOG_OPEN</find>
+      <find>newInvestorDialogOpen</find>
+      <find>&lt;Table</find>
+      <find>colo</find>
+      <find>toggleInvestorDialog</find>
+      <find>managersDialogOpen</find>
+      <find>svg</find>
+      <find>newInvestorTab</find>
+      <find>nvestor</find>
+      <find>Inv</find>
+      <find>inv</find>
+      <find>inn</find>
+      <find>&lt;Che</find>
+      <find>fna</find>
+      <find>setMQtCdUseQtValues</find>
+      <find>setQtMCdPfName</find>
+      <find>setQtCdInn</find>
+      <find>SET_MQT_USE_QT_VALUES</find>
     </findStrings>
     <replaceStrings>
       <replace>methodsOfReporting</replace>
+      <replace>managersDialogOpen</replace>
+      <replace>actions.js</replace>
+      <replace>toggleManagersDialog</replace>
+      <replace>toggleManagerDialog</replace>
+      <replace>newManagerTab</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -184,12 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/ReactApp.html" />
-        <option value="$PROJECT_DIR$/build/index.html" />
         <option value="$PROJECT_DIR$/src/app/appbar/appbar.js" />
         <option value="$PROJECT_DIR$/src/app/companyAgreemets/CompanyAgreements.js" />
         <option value="$PROJECT_DIR$/src/app/companyAgreemets/CompanyAgreementsTable.js" />
@@ -198,16 +211,13 @@
         <option value="$PROJECT_DIR$/src/app/newInvestor/appbar/InverstAppBar.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/NewInvestorDialog.java" />
         <option value="$PROJECT_DIR$/src/app/common/component.js" />
-        <option value="$PROJECT_DIR$/src/app/companyAgreemets/CompanyAgreementsPanel.js" />
         <option value="$PROJECT_DIR$/src/app/appbar/logo.svg" />
-        <option value="$PROJECT_DIR$/src/app/appbar/AppBar.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/investorTAb.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/anketaTab.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/newInvestorModal.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/statementTab.js" />
-        <option value="$PROJECT_DIR$/src/app/newInvestor/investor/investor.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/statements/depo.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/statements/statementTab.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/detailsTab.js" />
@@ -218,19 +228,32 @@
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/duTab.js" />
         <option value="$PROJECT_DIR$/src/app/common/utils.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaireTab.js" />
-        <option value="$PROJECT_DIR$/src/app/App.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/postAddress.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/address.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/accounts.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/connections.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/clientInfo.js" />
-        <option value="$PROJECT_DIR$/../../../../cbdbo/index.html" />
-        <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/commonData.js" />
-        <option value="$PROJECT_DIR$/src/app/redux/mainReducer.js" />
-        <option value="$PROJECT_DIR$/src/app/redux/actions.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/registrationData.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/questionnaireTab.js" />
         <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/investorTab.js" />
+        <option value="$PROJECT_DIR$/src/app/newInvestor/investor/investor.js" />
+        <option value="$PROJECT_DIR$/src/app/managers/managers.js" />
+        <option value="$PROJECT_DIR$/src/app/appbar/AppBar.js" />
+        <option value="$PROJECT_DIR$/src/app/companyAgreemets/CompanyAgreementsPanel.js" />
+        <option value="$PROJECT_DIR$/src/app/App.js" />
+        <option value="$PROJECT_DIR$/src/app/managers/managersModel.js" />
+        <option value="$PROJECT_DIR$/src/app/managers/tabs/questionnaire/address.js" />
+        <option value="$PROJECT_DIR$/src/app/managers/tabs/questionnaire/postAddress.js" />
+        <option value="$PROJECT_DIR$/src/app/managers/tabs/questionnaire/connections.js" />
+        <option value="$PROJECT_DIR$/src/app/managers/managerPanel.js" />
+        <option value="$PROJECT_DIR$/src/app/managers/manager.js" />
+        <option value="$PROJECT_DIR$/src/app/managers/tabs/Base.js" />
+        <option value="$PROJECT_DIR$/src/app/managers/tabs/questionnaire/questionnaireTab.js" />
+        <option value="$PROJECT_DIR$/src/app/redux/actions.js" />
+        <option value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/commonData.js" />
+        <option value="$PROJECT_DIR$/src/app/managers/tabs/questionnaire/commonData.js" />
+        <option value="$PROJECT_DIR$/src/app/redux/mainReducer.js" />
+        <option value="$PROJECT_DIR$/../../../../cbdbo/index.html" />
       </list>
     </option>
   </component>
@@ -300,6 +323,30 @@
               <item name="cbdbo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="managers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cbdbo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cbdbo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="managers" type="462c0819:PsiDirectoryNode" />
+              <item name="tabs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cbdbo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cbdbo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="managers" type="462c0819:PsiDirectoryNode" />
+              <item name="tabs" type="462c0819:PsiDirectoryNode" />
+              <item name="questionnaire" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cbdbo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cbdbo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="newInvestor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -334,16 +381,6 @@
               <item name="cbdbo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="newInvestor" type="462c0819:PsiDirectoryNode" />
-              <item name="investor" type="462c0819:PsiDirectoryNode" />
-              <item name="tabs" type="462c0819:PsiDirectoryNode" />
-              <item name="statements" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cbdbo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cbdbo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="redux" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -359,7 +396,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/managers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -384,11 +421,11 @@
       <recent name="C:\Users\user\Desktop\miniMBA\проект\proto\cbdbo\src\app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\miniMBA\проект\proto\cbdbo\src\app\managers" />
+      <recent name="C:\Users\user\Desktop\miniMBA\проект\proto\cbdbo\src\app\managers\tabs" />
       <recent name="C:\Users\user\Desktop\miniMBA\проект\proto\cbdbo\src\app\newInvestor\investor\tabs\questionnaire" />
       <recent name="C:\Users\user\Desktop\miniMBA\проект\proto\cbdbo\src\app\newInvestor\investor\tabs" />
       <recent name="C:\Users\user\Desktop\miniMBA\проект\proto\cbdbo\src\app\common" />
-      <recent name="C:\Users\user\Desktop\miniMBA\проект\proto\cbdbo\src\app\newInvestor\appbar" />
-      <recent name="C:\Users\user\Desktop\miniMBA\проект\proto\cbdbo\src\app\companyAgreemets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -456,7 +493,7 @@
       <workItem from="1559681071677" duration="21102000" />
       <workItem from="1560354243585" duration="7234000" />
       <workItem from="1560686686894" duration="18693000" />
-      <workItem from="1561271259616" duration="52995000" />
+      <workItem from="1561271259616" duration="66051000" />
     </task>
     <task id="LOCAL-00001" summary="appbar">
       <created>1560019740515</created>
@@ -542,17 +579,24 @@
       <option name="project" value="LOCAL" />
       <updated>1561489130595</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fatcaTab">
+      <created>1561492021667</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1561492021667</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100162000" />
+    <option name="totallyTimeSpent" value="113218000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7316017" visible="true" weight="0.26992288" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7316017" visible="true" weight="0.23521851" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -562,7 +606,7 @@
       <window_info id="npm" order="7" sideWeight="0.26839826" side_tool="true" weight="0.27056554" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32974428" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49807197" visible="true" weight="0.3781965" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49807197" visible="true" weight="0.082099594" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -597,51 +641,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="fatcaTab" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/App.test.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/react-scripts/template/src/App.css" />
-    <entry file="file://$PROJECT_DIR$/node_modules/react-scripts/scripts/start.js" />
-    <entry file="file://$PROJECT_DIR$/src/app/serviceWorker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="124" column="8" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReactApp.html" />
-    <entry file="file://$PROJECT_DIR$/build/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/companyAgreemets/CompanyAgreements.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/redux/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3944">
-          <caret line="232" column="6" selection-start-line="232" selection-start-column="6" selection-end-line="232" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
@@ -663,26 +662,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/logo.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/companyAgreemets/CompanyAgreementsPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
-          <caret line="138" column="39" selection-start-line="138" selection-start-column="39" selection-end-line="138" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/companyAgreemets/CompanyAgreementsTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="27" column="20" selection-start-line="10" selection-start-column="12" selection-end-line="27" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/pickers/DatePicker/DatePicker.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -725,16 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/investor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/statements/depo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -748,50 +717,10 @@
     <entry file="file://$PROJECT_DIR$/src/app/appbar/cbdbo-logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/appbar/AppBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="46" column="93" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="93" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/newInvestor/newInvestorModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="51" column="25" selection-start-line="49" selection-start-column="16" selection-end-line="51" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/tailingsTab.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="27" column="27" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/statements/sites.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/newInvestor/inverstorPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -812,16 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/fatcaTab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="135" column="34" lean-forward="true" selection-start-line="135" selection-start-column="34" selection-end-line="135" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/duTab.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
@@ -836,23 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="94" column="19" lean-forward="true" selection-start-line="85" selection-start-column="12" selection-end-line="94" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/common/component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="28" column="29" selection-end-line="38" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="74" column="33" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -893,16 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../cbdbo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/accounts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
@@ -921,34 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
           <caret line="28" column="90" selection-start-line="28" selection-start-column="90" selection-end-line="28" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/redux/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="60" column="33" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#836#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/redux/mainReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="160" column="26" lean-forward="true" selection-start-line="160" selection-start-column="26" selection-end-line="160" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/commonData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="99" column="19" selection-start-line="19" selection-start-column="12" selection-end-line="99" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#675#4982#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -977,10 +841,227 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/investorTab.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="135" column="41" lean-forward="true" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
+        <state relative-caret-position="229">
+          <caret line="143" column="11" lean-forward="true" selection-start-line="143" selection-start-column="11" selection-end-line="143" selection-end-column="11" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/companyAgreemets/CompanyAgreementsTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="28" selection-start-line="10" selection-start-column="12" selection-end-line="27" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/fatcaTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="114" column="40" lean-forward="true" selection-start-line="97" selection-start-column="32" selection-end-line="114" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/appbar/AppBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="107" column="34" lean-forward="true" selection-start-line="88" selection-start-column="20" selection-end-line="107" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#2462#3462#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/companyAgreemets/CompanyAgreementsPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="e#3661#4439#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/newInvestor/newInvestorModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="44" column="31" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/investor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/managers/tabs/questionnaire/address.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/managers/tabs/questionnaire/postAddress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="34" lean-forward="true" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/managers/tabs/questionnaire/connections.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/newInvestor/inverstorPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="81" column="15" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/managers/managersModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="120" column="15" selection-start-line="120" selection-start-column="15" selection-end-line="120" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/managers/managerPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/common/component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="28" column="29" selection-end-line="38" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/managers/manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="80" column="71" selection-start-line="80" selection-start-column="71" selection-end-line="80" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/managers/tabs/Base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/managers/tabs/questionnaire/questionnaireTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/statements/sites.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="51" column="81" selection-start-line="49" selection-start-column="20" selection-end-line="51" selection-end-column="81" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/redux/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="223" column="30" selection-start-line="223" selection-start-column="16" selection-end-line="223" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#1120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/managers/tabs/questionnaire/commonData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="21" column="119" selection-start-line="21" selection-start-column="119" selection-end-line="21" selection-end-column="119" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/newInvestor/investor/tabs/questionnaire/commonData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="83" column="116" selection-start-line="83" selection-start-column="107" selection-end-line="83" selection-end-column="116" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/redux/mainReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="136" column="49" selection-start-line="136" selection-start-column="49" selection-end-line="136" selection-end-column="49" />
+          <folding>
+            <element signature="e#263#3621#0" />
+            <element signature="e#3634#3751#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../cbdbo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

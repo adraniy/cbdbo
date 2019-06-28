@@ -8,7 +8,19 @@ import Tab from "@material-ui/core/Tab";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import Popover from "@material-ui/core/Popover";
 import MenuItem from "@material-ui/core/MenuItem";
-import { withStyles } from "@material-ui/core/styles";
+import {withStyles} from "@material-ui/core/styles";
+import FormControl from "@material-ui/core/FormControl";
+import Button from "@material-ui/core/Button";
+import FormatListBulleted from "@material-ui/icons/FormatListBulleted";
+import Drawer from "@material-ui/core/Drawer";
+import Edit from "@material-ui/icons/Edit";
+import Group from "@material-ui/icons/Group";
+import Group1 from "@material-ui/icons/GroupTwoTone";
+import Filter from "@material-ui/icons/MoreVert"
+import IconButton from "@material-ui/core/IconButton";
+import * as actions from "../redux/actions";
+import {connect} from "react-redux";
+import {bindActionCreators} from 'redux'
 
 const styles = {
     Tab: {
@@ -21,7 +33,8 @@ export class AppBar extends React.Component {
         super(props);
         this.state = {
             action: 1,
-            anchorEl: null
+            anchorEl: null,
+            openDrawer: false
         };
         this.handleClick = (event) => {
             event.stopPropagation();
@@ -31,9 +44,9 @@ export class AppBar extends React.Component {
             });
         };
 
-        this.handleClose = ()=> this.setState({ anchorEl: null});
+        this.handleClose = () => this.setState({anchorEl: null});
 
-        this.handleMenuItemClick =(menuItem) => {
+        this.handleMenuItemClick = (menuItem) => {
             this.handleClose();
             this.props.handleChange(null, 0, menuItem)
         };
@@ -48,23 +61,65 @@ export class AppBar extends React.Component {
                         <Logo/>
                     </Typography>
 
-                    <Tabs value={this.props.value} onChange={(e, v)=> {
+                    <Tabs value={this.props.value} onChange={(e, v) => {
                         if (v !== 0) {
-                            this.props.handleChange(e,v, e.target.textContent);
-                        }}
+                            this.props.handleChange(e, v, e.target.textContent);
+                        }
+                    }
                     }>
-                        <Tab onClick={this.handleClick} classes={{wrapper: this.props.classes.Tab}} label="Брокерское обслуживание"
-                             icon={<ArrowDropDownIcon  />}
-                        />
-                        <Tab  label="Квалифицированный инвестор"/>
-                        <Tab  label="Налоговый агент"/>
-                        <Tab  label="Настройки"/>
-                        <Tab  label="Отчеты"/>
-                        <Tab  label="Справочники"/>
-                        <Tab  label="Окно"/>
-                        <Tab  label="Справка"/>
+                        <Tab onClick={this.handleClick} classes={{wrapper: this.props.classes.Tab}}
+                             label="Брокерское обслуживание"
+                             icon={<ArrowDropDownIcon/>}/>
+                        <Tab label="Квалифицированный инвестор"/>
+                        <Tab label="Налоговый агент"/>
+                        <Tab label="Настройки"/>
+                        <Tab label="Отчеты"/>
+                        <Tab label="Справочники"/>
+                        <Tab label="Окно"/>
+                        <Tab label="Справка"/>
                     </Tabs>
+                    <IconButton style={{position: 'absolute', right: 0}}
+                                onClick={() => this.setState({openDrawer: true})}>
+                        <Filter/>
+                    </IconButton>
                 </Toolbar>
+                <Drawer anchor="right" open={this.state.openDrawer} onClose={() => this.setState({openDrawer: false})}>
+
+
+                    <FormControl style={{marginTop: '20px'}} fullWidth>
+                        <Button style={{justifyContent: 'flex-start'}}
+                                onClick={() => {
+                                    this.setState({openDrawer: false});
+                                    this.props.actions.toggleManagersDialog();
+                                }}> <Group
+                            style={{paddingRight: '10px'}}/> Распорядители </Button>
+                    </FormControl>
+                    <FormControl fullWidth>
+                        <Button style={{justifyContent: 'flex-start'}}> <Group1
+                            style={{paddingRight: '10px'}}/> Доверенные лица </Button>
+                    </FormControl>
+                    <FormControl fullWidth>
+                        <Button style={{justifyContent: 'flex-start'}}> <FormatListBulleted
+                            style={{paddingRight: '10px'}}/> Изменения </Button>
+                    </FormControl>
+                    <FormControl fullWidth>
+                        <Button style={{justifyContent: 'flex-start'}}> <FormatListBulleted
+                            style={{paddingRight: '10px'}}/>Степень риска </Button>
+                    </FormControl>
+                    <FormControl fullWidth>
+                        <Button style={{justifyContent: 'flex-start'}}> <FormatListBulleted
+                            style={{paddingRight: '10px'}}/>Служебные отметки</Button>
+                    </FormControl>
+                    <FormControl>
+                        <Button style={{justifyContent: 'flex-start'}}> <Edit style={{paddingRight: '10px'}}/>Карточки и
+                            заявки по
+                            телефону <ArrowDropDownIcon/> </Button>
+                    </FormControl>
+                    <FormControl fullWidth>
+                        <Button style={{justifyContent: 'flex-start'}}> <Edit style={{paddingRight: '10px'}}/>Подключение
+                            услуг/сервисов<ArrowDropDownIcon/></Button>
+                    </FormControl>
+                </Drawer>
                 <Popover
                     open={open}
                     anchorEl={this.state.anchorEl}
@@ -81,10 +136,10 @@ export class AppBar extends React.Component {
                     <MenuItem disabled onClick={() => this.handleMenuItemClick("usersAgreements")}>
                         Список договоров физ.лиц
                     </MenuItem>
-                    <MenuItem  onClick={() => this.handleMenuItemClick("companyAgreements")}>
+                    <MenuItem onClick={() => this.handleMenuItemClick("companyAgreements")}>
                         Список договоров юр.лиц
                     </MenuItem>
-                    <MenuItem  disabled onClick={() => this.handleMenuItemClick("requests")}>
+                    <MenuItem disabled onClick={() => this.handleMenuItemClick("requests")}>
                         Список запросов
                     </MenuItem>
                 </Popover>
@@ -92,4 +147,17 @@ export class AppBar extends React.Component {
         );
     }
 }
-export default withStyles(styles)(AppBar);
+
+const mapStateToProps = function (state) {
+    return {
+        managersDialogOpen: state.main.managersDialogOpen
+    }
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        actions: bindActionCreators(actions, dispatch)
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(AppBar));

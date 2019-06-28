@@ -11,9 +11,19 @@ import {
     SET_GIIN,
     SET_INVESTOR_CATEGORY,
     SET_INVESTOR_DIALOG_OPEN,
-    SET_INVESTOR_DIALOG_TAB, SET_QT_CD_ADDITIONAL,
+    SET_INVESTOR_DIALOG_TAB,
+    SET_MANAGER_DIALOG_OPEN,
+    SET_MANAGER_DIALOG_TAB,
+    SET_MANAGERS_DIALOG_OPEN,
+    SET_MQT_CD_FNAME,
+    SET_MQT_CD_INN,
+    SET_MQT_CD_NAME,
+    SET_MQT_CD_SNAME,
+    SET_MQT_USE_QT_VALUES,
+    SET_QT_CD_ADDITIONAL,
     SET_QT_CD_BASES,
-    SET_QT_CD_BIK, SET_QT_CD_CREDIT_INSTITUTION,
+    SET_QT_CD_BIK,
+    SET_QT_CD_CREDIT_INSTITUTION,
     SET_QT_CD_INN,
     SET_QT_CD_KPP,
     SET_QT_CD_NAME,
@@ -27,7 +37,8 @@ import {
     SET_QT_CD_PNAME,
     SET_QT_CD_PSNAME,
     SET_QT_CD_SHORT_NAME,
-    SET_QT_CD_SHORT_NAME_EN, SET_QT_CD_UNLIMITED,
+    SET_QT_CD_SHORT_NAME_EN,
+    SET_QT_CD_UNLIMITED,
     SET_QT_CODE,
     SET_QT_DATE,
     SET_QT_INNER_TAB,
@@ -43,6 +54,18 @@ export function qtInnerTab(e, v) {
 export function toggleInvestorDialog() {
     return (dispatch, getState) => {
         dispatch({type: SET_INVESTOR_DIALOG_OPEN, data: !getState().main.newInvestorDialogOpen});
+    }
+}
+
+export function toggleManagersDialog() {
+    return (dispatch, getState) => {
+        dispatch({type: SET_MANAGERS_DIALOG_OPEN, data: !getState().main.managersDialogOpen});
+    }
+}
+
+export function toggleManagerDialog() {
+    return (dispatch, getState) => {
+        dispatch({type: SET_MANAGER_DIALOG_OPEN, data: !getState().main.managerDialogOpen});
     }
 }
 
@@ -178,10 +201,34 @@ export function investorDialogTab(e, v) {
     return {type: SET_INVESTOR_DIALOG_TAB, data: v};
 }
 
+export function managerDialogTab(e, v) {
+    return {type: SET_MANAGER_DIALOG_TAB, data: v};
+}
+
 export function statementInnerTab(e, v) {
     return {type: SET_STATEMENT_INNER_TAB, data: v};
 }
 
 export function changeCategory(event) {
     return {type: SET_INVESTOR_CATEGORY, data: event.target.value};
+}
+
+export function setMQtCdPName(e) {
+    return {type: SET_MQT_CD_NAME, data: e.target.value};
+}
+
+export function setMQtCdPsName(e) {
+    return {type: SET_MQT_CD_SNAME, data: e.target.value};
+}
+
+export function setMQtCdPfName(e) {
+    return {type: SET_MQT_CD_FNAME, data: e.target.value};
+}
+
+export function setMQtCdInn(e) {
+    return {type: SET_MQT_CD_INN, data: e.target.value};
+}
+
+export function setMQtCdUseQtValues(e) {
+    return {type: SET_MQT_USE_QT_VALUES, data: e.target.checked};
 }
