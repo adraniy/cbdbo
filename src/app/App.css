@@ -7,6 +7,10 @@
   height: 40vmin;
   pointer-events: none;
 }
+.path, .path .MuiSelect-select.MuiSelect-selectMenu, .path .MuiFormLabel-root, .path .MuiFormLabel-root.Mui-focused,
+.path .MuiInputBase-input{
+  color: orange;
+}
 
 .App-header {
   background-color: #282c34;

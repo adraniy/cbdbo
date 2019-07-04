@@ -43,11 +43,12 @@ const theme = createMuiTheme({
                 textTransform: "none"
             }
         },
+
         MuiFormControl: {
             root: {
                 color: '#757575',
                 '&.noLabel': {
-                    '& label + .MuiInput-formControl':{
+                    '& label + .MuiInput-formControl': {
                         marginTop: 0
                     }
                 }
@@ -130,8 +131,8 @@ export default class App extends React.Component {
                                 {action === 'companyAgreements' && <CompanyAgreements/>
                                 || (<span>{this.state.action}</span>)}
                                 <NewInvestorDialog/>
-                                <ManagersModal />
-                                <Manager />
+                                <ManagersModal/>
+                                <Manager/>
                             </Paper>
                         </div>
                     </MuiPickersUtilsProvider>

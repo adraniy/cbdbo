@@ -9,7 +9,6 @@ import {
     SET_DU_TYPE,
     SET_FOREIGN_FINANCIAL_INSTITUTION,
     SET_GIIN,
-    SET_INVESTOR_CATEGORY,
     SET_INVESTOR_DIALOG_OPEN,
     SET_INVESTOR_DIALOG_TAB,
     SET_MANAGER_DIALOG_OPEN,
@@ -19,7 +18,9 @@ import {
     SET_MQT_CD_INN,
     SET_MQT_CD_NAME,
     SET_MQT_CD_SNAME,
-    SET_MQT_USE_QT_VALUES,
+    SET_MQT_USE_QT_VALUES, SET_NI_DEP,
+    SET_NI_INVESTOR_CATEGORY,
+    SET_NI_MANAGER_PGR,
     SET_QT_CD_ADDITIONAL,
     SET_QT_CD_BASES,
     SET_QT_CD_BIK,
@@ -210,7 +211,15 @@ export function statementInnerTab(e, v) {
 }
 
 export function changeCategory(event) {
-    return {type: SET_INVESTOR_CATEGORY, data: event.target.value};
+    return {type: SET_NI_INVESTOR_CATEGORY, data: event.target.value};
+}
+
+export function managerPGR(event) {
+    return {type: SET_NI_MANAGER_PGR, data: event.target.value};
+}
+
+export function dep(event) {
+    return {type: SET_NI_DEP, data: event.target.value};
 }
 
 export function setMQtCdPName(e) {

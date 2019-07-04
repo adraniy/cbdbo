@@ -7,7 +7,11 @@ let initial = {
     statementInnerTab: 0,
     newManagerTab: 0,
     investorTab: {
-        category: null
+        category: null,
+        code: "",
+        managerPGR: null,
+        dep: null,
+        depCode: null,
     },
     fatcaTab: {
         GIIN: "",
@@ -132,7 +136,11 @@ export const UPDATE_INVESTOR = 'UPDATE_INVESTOR';
 export const SET_INVESTOR_DIALOG_OPEN = 'SET_INVESTOR_DIALOG_OPEN';
 export const SET_INVESTOR_DIALOG_TAB = 'SET_INVESTOR_DIALOG_TAB';
 export const SET_STATEMENT_INNER_TAB = 'SET_STATEMENT_INNER_TAB';
-export const SET_INVESTOR_CATEGORY = 'SET_INVESTOR_CATEGORY';
+
+export const SET_NI_INVESTOR_CATEGORY = 'SET_NI_INVESTOR_CATEGORY';
+export const SET_NI_MANAGER_PGR = 'SET_NI_MANAGER_PGR';
+export const SET_NI_DEP = 'SET_NI_DEP';
+
 export const SET_GIIN = 'SET_GIIN';
 export const SET_FOREIGN_FINANCIAL_INSTITUTION = 'SET_FOREIGN_FINANCIAL_INSTITUTION';
 export const SELECT_FOREIGN_FINANCIAL_INSTITUTION = 'SELECT_FOREIGN_FINANCIAL_INSTITUTION';
@@ -310,9 +318,17 @@ export function main(state = initial, action) {
             return {
                 ...state, duTab: {...state.duTab, type: action.data}
             };
-        case SET_INVESTOR_CATEGORY:
+        case SET_NI_INVESTOR_CATEGORY:
             return {
-                ...state, investorTab: {...state.investorTab, category: action.data}
+                ...state, investorTab: {...state.investorTab, category: action.data, code: action.data.code}
+            };
+        case SET_NI_MANAGER_PGR:
+            return {
+                ...state, investorTab: {...state.investorTab, managerPGR: action.data}
+            };
+        case SET_NI_DEP:
+            return {
+                ...state, investorTab: {...state.investorTab, dep: action.data, depCode: '5200'}
             };
         case SELECT_TAX_RESIDENT:
             return {

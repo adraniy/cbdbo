@@ -17,34 +17,39 @@ import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
 import Table from "@material-ui/core/Table";
-import MenuItem from "@material-ui/core/MenuItem";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 
 
 const styles = theme => ({});
 
+const managers = [
+    "Иванов Иван Иванович",
+    "Петров Иван Иванович",
+    "Сидоров Иван Иванович",
+];
+
 const categories = [
-    "Банки (код инвестора 1хххх)",
-    "Некомерческие организации (код инвестора 2хххх)",
-    "Страховые и инвестиционные компании (код инвестора 3хххх)",
-    "Государственные органы, государственные и муниципальные предприятия (код инвестора 5хххх)",
-    "Прочие инвесторы (код инвестора 6хххх)",
-    "Негосударственные пенсионные фонды (код инвестора 9хххх)",
-    "Управляющие компании и договоры ДУ (код инвестора 88ххх)",
-    "Фонд (код инвестора 86ххх)",
-    "Клиент ИДУ с внешним хранением ЦБ (код инвестора 87ххх)",
-    "Клиент ИДУ с хранением ЦБ в депозитарии Сбербанка(код инвестора 89ххх)",
-    "Собственные счета УК (код инвестора 85ххх)",
+    {name: "Банки (код инвестора 1хххх)", code: "1111A"},
+    {name: "Некомерческие организации (код инвестора 2хххх)", code: "2222A"},
+    {name: "Страховые и инвестиционные компании (код инвестора 3хххх)", code: "3333A"},
+    {name: "Государственные органы, государственные и муниципальные предприятия (код инвестора 5хххх)", code: "5555A"},
+    {name: "Прочие инвесторы (код инвестора 6хххх)", code: "6666A"},
+    {name: "Негосударственные пенсионные фонды (код инвестора 9хххх)", code: "9999A"},
+    {name: "Управляющие компании и договоры ДУ (код инвестора 88ххх)", code: "8888A"},
+    {name: "Фонд (код инвестора 86ххх)", code: "8666A"},
+    {name: "Клиент ИДУ с внешним хранением ЦБ (код инвестора 87ххх)", code: "8777A"},
+    {name: "Клиент ИДУ с хранением ЦБ в депозитарии Сбербанка(код инвестора 89ххх)", code: "8999A"},
+    {name: "Собственные счета УК (код инвестора 85ххх)", code: "8555A"}
 ];
 
 export class InvestorTab extends React.Component {
 
     renderCategory() {
-        let items = selectItems(categories);
-        return <FormControl fullWidth required>
+        let items = selectItems(categories, 'name');
+        return <FormControl fullWidth required className={'path'}>
             <InputLabel>Категория инвестора</InputLabel>
-            <Select value={this.props.investorTab.category || ""}
+            <Select value={this.props.category || ""}
                     onChange={this.props.actions.changeCategory}>
                 {items}
             </Select>
@@ -58,9 +63,9 @@ export class InvestorTab extends React.Component {
                 <Grid item xs={3}></Grid>
                 <Grid item xs={3}>
                     <FormControl required style={{paddingLeft: "10px", flexDirection: 'row'}}>
-                    <TextField label="Код инвестора"/>
-                    <Button color="primary"> Получить код</Button>
-                </FormControl>
+                        <TextField className={'path'} label="Код инвестора" value={this.props.code}/>
+                        <Button color="primary"> Получить код</Button>
+                    </FormControl>
                 </Grid>
                 <Grid item xs={3}>
                     <FormControl>
@@ -82,41 +87,44 @@ export class InvestorTab extends React.Component {
                     </div>
                 </Grid>
                 <Grid item xs={6} style={{padding: '0px 42px'}}>
-                    <Grid  container>
-                    <FormControl fullWidth>
-                        <label>Список торговых систем:</label>
-                        <Table>
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell style={{width: '20px'}}>Номер</TableCell>
-                                    <TableCell >ID</TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                <TableRow>
-                                    <TableCell></TableCell><TableCell></TableCell>
-                                </TableRow>
-                            </TableBody>
-                        </Table>
-                    </FormControl>
+                    <Grid container>
+                        <FormControl fullWidth>
+                            <label>Список торговых систем:</label>
+                            <Table>
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell style={{width: '20px'}}>Номер</TableCell>
+                                        <TableCell>ID</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    <TableRow>
+                                        <TableCell></TableCell><TableCell></TableCell>
+                                    </TableRow>
+                                </TableBody>
+                            </Table>
+                        </FormControl>
                     </Grid>
                     <Grid container>
                         <Grid item xs={6} style={{padding: '5px 10px'}}>
                             <FormControl fullWidth><TextField label="Категория инвестора" value={'КОУР'}/></FormControl>
-                            <FormControl fullWidth><TextField label="Доп. параметр риска на ВР МБ" /></FormControl>
+                            <FormControl fullWidth><TextField label="Доп. параметр риска на ВР МБ"/></FormControl>
                         </Grid>
                         <Grid item xs={6} style={{padding: '5px 10px'}}>
-                            <FormControl fullWidth><TextField label="Доп. параметр риска на ФР МБ" value={'0 уровень риска'}/></FormControl>
-                            <FormControl fullWidth><TextField label="Статус кавлифицированного онвестора" /></FormControl>
+                            <FormControl fullWidth><TextField label="Доп. параметр риска на ФР МБ"
+                                                              value={'0 уровень риска'}/></FormControl>
+                            <FormControl fullWidth><TextField
+                                label="Статус кавлифицированного онвестора"/></FormControl>
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={3} >
+                <Grid item xs={3}>
                     <FormControl fullWidth><TextField label="Риск профиль"/></FormControl>
-                    <FormControl fullWidth><TextField label="Рекомендованные продукты" /></FormControl>
-                    <FormControl fullWidth>
+                    <FormControl fullWidth><TextField label="Рекомендованные продукты"/></FormControl>
+                    <FormControl fullWidth className={'path'}>
                         <InputLabel>Менеджер Брокерского подразделения (ПГР)</InputLabel>
-                        <Select value={""}></Select>
+                        <Select value={this.props.managerPGR}
+                                onChange={this.props.actions.managerPGR}>{selectItems(managers)}</Select>
                     </FormControl>
                     <FormControl fullWidth>
                         <InputLabel>Менеджер Розничного блока</InputLabel>
@@ -124,24 +132,29 @@ export class InvestorTab extends React.Component {
                     </FormControl>
                 </Grid>
                 <Grid item xs={3} style={{padding: '0px 10px'}}>
-                    <FormControl fullWidth><TextField label="Наименование подразделения" /></FormControl>
-                    <FormControl fullWidth><TextField label="Код" /></FormControl>
-                    <FormControl fullWidth><TextField label="Наличие служебной информации по договору" /></FormControl>
-                    <FormControl fullWidth><TextField multiline label="Служебная информации по договору" /></FormControl>
+                    <FormControl className={'path'} fullWidth>
+                        <InputLabel>Наименование подразделения</InputLabel>
+                        <Select value={this.props.dep}
+                            onChange={this.props.actions.dep}>{selectItems(['Юго-Западный Банк ПАО Сбербанк'])}</Select>
+                    </FormControl>
+                    <FormControl className={'path'} fullWidth><TextField label="Код"
+                                                                         value={this.props.depCode}/></FormControl>
+                    <FormControl fullWidth><TextField label="Наличие служебной информации по договору"/></FormControl>
+                    <FormControl fullWidth><TextField multiline label="Служебная информации по договору"/></FormControl>
                 </Grid>
                 <Grid item xs={3} style={{padding: '0px 10px'}}>
                     <FormControl fullWidth><Button>Выбрать подразделение</Button></FormControl>
                 </Grid>
                 <Grid item xs={3} style={{padding: '0px 10px'}}>
-                        <FormControlLabel
-                            control={<Checkbox disabled checked={false}  />}
-                            label="По акции банка"/>
-                        <Button color={"primary"}>Проверить</Button>
                     <FormControlLabel
-                        control={<Checkbox disabled checked={false}  />}
+                        control={<Checkbox disabled checked={false}/>}
+                        label="По акции банка"/>
+                    <Button color={"primary"}>Проверить</Button>
+                    <FormControlLabel
+                        control={<Checkbox disabled checked={false}/>}
                         label="Отправка извещения по EMail"/>
                     <FormControlLabel
-                        control={<Checkbox checked={false}  />}
+                        control={<Checkbox checked={false}/>}
                         label="Получение извещения в офисе"/>
                 </Grid>
             </Grid>
@@ -151,7 +164,12 @@ export class InvestorTab extends React.Component {
 
 const mapStateToProps = function (state) {
     return {
-        investorTab: state.main.investorTab
+        investorTab: state.main.investorTab,
+        category: state.main.investorTab.category,
+        code: state.main.investorTab.code,
+        managerPGR: state.main.investorTab.managerPGR,
+        depCode: state.main.investorTab.depCode,
+        dep: state.main.investorTab.dep,
     }
 };
 
