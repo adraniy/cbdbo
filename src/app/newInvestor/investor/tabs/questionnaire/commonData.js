@@ -66,24 +66,7 @@ export class CommonData extends React.Component {
                 <Grid item xs={6} style={{paddingLeft: '20px'}}>
                     <Grid container>
                         <Grid item xs={6}>
-                            <FormControl>
-                                <TextField label={'Фамилия представителя'} value={this.props.psName}
-                                           onChange={this.props.actions.setQtCdPsName}/>
-                                <TextField label={'Имя представителя'} value={this.props.pName}
-                                           onChange={this.props.actions.setQtCdPName}/>
-                                <TextField label={'Отчество представителя'} value={this.props.pfName}
-                                           onChange={this.props.actions.setQtCdPfName
-                                           }/>
-                            </FormControl>
-                        </Grid>
-                        <Grid item xs={6}>
                             <FormControl fullWidth>
-                                <TextField label={'Основание представителя'} value={this.props.bases}
-                                           onChange={this.props.actions.setQtCdBases}/>
-                                {datePicker('Срок полномочий', this.props.period, this.props.actions.setQtCdPeriod)}
-                                <FormControlLabel control={<Checkbox color={"primary"} checked={this.props.unlimited}
-                                                                     onChange={this.props.actions.setQtCdUnlimited}/>}
-                                                  label={'Бессрочно'}/>
                                 <FormControlLabel control={<Checkbox color={"primary"} checked={this.props.creditInstitution}
                                                                      onChange={this.props.actions.setQtCdCreditInstitution}/>}
                                                   label={'Кредитная организация'}/>
@@ -115,11 +98,8 @@ const mapStateToProps = function (state) {
         okato: state.main.qtCommonData.okato,
         ogrn: state.main.qtCommonData.ogrn,
         okved: state.main.qtCommonData.okved,
-        pName: state.main.qtCommonData.pName,
-        psName: state.main.qtCommonData.psName,
-        pfName: state.main.qtCommonData.pfName,
-        bases: state.main.qtCommonData.bases,
-        period: state.main.qtCommonData.period,
+
+
         creditInstitution: state.main.qtCommonData.creditInstitution,
         unlimited: state.main.qtCommonData.unlimited,
         additional: state.main.qtCommonData.additional

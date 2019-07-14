@@ -69,11 +69,12 @@ export class CommonData extends React.Component {
                     </Grid>
                     <Grid item xs={12}>
                         {select("Гражданство", this.props.sex, this.props.actions.setQtCdPfName, selectItems(['России', '-']))}
-                    </Grid><Grid item xs={12}>
+                    </Grid>
+                    <Grid item xs={12}>
                     <FormControl>
                         <FormControlLabel
                             control={<Checkbox checked={false}/>}
-                            label='Нологовый резидент РФ'/>
+                            label='Налоговый резидент РФ'/>
                     </FormControl>
                     <FormControl>
                         <Button color={"primary"}> Проверка по клиентам</Button>

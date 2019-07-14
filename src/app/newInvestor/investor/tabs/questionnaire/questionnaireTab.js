@@ -14,6 +14,7 @@ import PostAddress from "./postAddress";
 import Accounts from "./accounts";
 import Connections from "./connections";
 import ClientInfo from "./clientInfo";
+import RepresentativeInfoTab from "../representativeInfoTab";
 
 const styles = theme => ({});
 
@@ -45,6 +46,7 @@ export class QuestionnaireTab extends React.Component {
                         <Tab label="Счета"/>
                         <Tab label="Виды связи"/>
                         <Tab label="Информационные сведения о клиенте"/>
+                        <Tab label="Сведения о представителе"/>
                     </Tabs>
                     <hr style={{margin: '0'}}/>
                     <div style={{marginTop: '10px'}}>
@@ -55,6 +57,7 @@ export class QuestionnaireTab extends React.Component {
                         {this.props.questionnaireInnerTab === 4 && <Accounts/>}
                         {this.props.questionnaireInnerTab === 5 && <Connections/>}
                         {this.props.questionnaireInnerTab === 6 && <ClientInfo/>}
+                        {this.props.questionnaireInnerTab === 7 && <RepresentativeInfoTab/>}
                     </div>
                 </Grid>
             </Grid>

@@ -122,6 +122,7 @@ let initial = {
         unlimited: false,
         creditInstitution: false,
         additional: "",
+        position: ""
     },
     mQtCommonData: {
         inn: "",
@@ -174,6 +175,7 @@ export const SET_QT_CD_PERIOD = 'SET_QT_CD_PERIOD';
 export const SET_QT_CD_UNLIMITED = 'SET_QT_CD_UNLIMITED';
 export const SET_QT_CD_CREDIT_INSTITUTION = 'SET_QT_CD_CREDIT_INSTITUTION';
 export const SET_QT_CD_ADDITIONAL = 'SET_QT_CD_ADDITIONAL';
+export const SET_QT_CD_POSITION = 'SET_QT_CD_POSITION';
 export const SET_MANAGERS_DIALOG_OPEN = 'SET_MANAGERS_DIALOG_OPEN';
 export const SET_MANAGER_DIALOG_OPEN = 'SET_MANAGER_DIALOG_OPEN';
 export const SET_MANAGER_DIALOG_TAB = 'SET_MANAGER_DIALOG_TAB';
@@ -217,6 +219,10 @@ export function main(state = initial, action) {
         case SET_QT_CD_ADDITIONAL:
             return {
                 ...state, qtCommonData: {...state.qtCommonData, additional: action.data}
+            };
+        case SET_QT_CD_POSITION:
+            return {
+                ...state, qtCommonData: {...state.qtCommonData, position: action.data}
             };
         case SET_QT_CD_UNLIMITED:
             return {

@@ -18,7 +18,8 @@ import {
     SET_MQT_CD_INN,
     SET_MQT_CD_NAME,
     SET_MQT_CD_SNAME,
-    SET_MQT_USE_QT_VALUES, SET_NI_DEP,
+    SET_MQT_USE_QT_VALUES,
+    SET_NI_DEP,
     SET_NI_INVESTOR_CATEGORY,
     SET_NI_MANAGER_PGR,
     SET_QT_CD_ADDITIONAL,
@@ -36,6 +37,7 @@ import {
     SET_QT_CD_PERIOD,
     SET_QT_CD_PFNAME,
     SET_QT_CD_PNAME,
+    SET_QT_CD_POSITION,
     SET_QT_CD_PSNAME,
     SET_QT_CD_SHORT_NAME,
     SET_QT_CD_SHORT_NAME_EN,
@@ -84,6 +86,10 @@ export function setQtCdCreditInstitution(e) {
 
 export function setQtCdAdditional(e) {
     return {type: SET_QT_CD_ADDITIONAL, data: e.target.value};
+}
+
+export function setQtCdPosition(e) {
+    return {type: SET_QT_CD_POSITION, data: e.target.value};
 }
 
 export function setQtCdPeriod(e) {
