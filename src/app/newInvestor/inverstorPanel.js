@@ -13,15 +13,72 @@ import Error from "@material-ui/icons/Error";
 import LocalPostOffice from "@material-ui/icons/LocalPostOffice";
 import Print from "@material-ui/icons/Print";
 import FormatListBulleted from "@material-ui/icons/FormatListBulleted";
-
 import FormControl from "@material-ui/core/FormControl";
 import {doNothing} from "../common/utils";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-
-
+import createReport from 'docx-templates';
+import axios from 'axios'
+import {readFile1} from "../../index";
+//import * as questionnaire from "../../doc/questionnaire.docx"
 const styles = theme => ({});
 
+const downloadURL = (data, fileName) => {
+    const a = document.createElement('a');
+    a.href = data;
+    a.download = fileName;
+    document.body.appendChild(a);
+    a.style = 'display: none';
+    a.click();
+    a.remove();
+};
+
+const saveDataToFile = (data, fileName, mimeType) => {
+    const blob = new Blob([data], { type: mimeType });
+    const url = window.URL.createObjectURL(blob);
+    downloadURL(url, fileName, mimeType);
+    setTimeout(() => {
+        window.URL.revokeObjectURL(url);
+    }, 1000);
+};
+
+const readFileIntoArrayBuffer = fd =>
+    new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onerror = reject;
+        reader.onload = () => {
+            resolve(reader.result);
+        };
+        reader.readAsArrayBuffer(fd);
+    });
+
 export class InvestorPanel extends React.Component {
+
+
+    constructor(props, context) {
+        super(props, context);
+
+        this.print = () =>{
+            axios.get('questionnaire.docx', {
+                responseType: 'blob',
+                    timeout: 30000,
+            }).then((f)=>{
+                readFileIntoArrayBuffer(f.data).then((template) => {
+                    const report =   createReport({
+                        template,
+                        data: { name: 'John', surname: 'Appleseed' },
+                    }).then((r) => {
+                        saveDataToFile(
+                            r,
+                            'report.docx',
+                            'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+                        );
+                    });
+                })
+            })
+
+
+        }
+    }
 
     render() {
         return <div>
@@ -57,7 +114,7 @@ export class InvestorPanel extends React.Component {
                     <Button disabled variant={"text"} onClick={doNothing()}><Print/>Печать пакета</Button>
                 </FormControl>
                 <FormControl  style={{paddingLeft: "10px"}}>
-                    <Button disabled onClick={doNothing}> <Print/> Печать <ArrowDropDownIcon/></Button>
+                    <Button  onClick={this.print}> <Print/> Печать <ArrowDropDownIcon/></Button>
                 </FormControl>
                 <FormControl style={{paddingLeft: "10px"}}>
                     <Button disabled variant={"text"} onClick={doNothing()}><FormatListBulleted/>Сканированные документы</Button>
