@@ -14,7 +14,7 @@ import PostAddress from "./postAddress";
 import Accounts from "./accounts";
 import Connections from "./connections";
 import ClientInfo from "./clientInfo";
-import RepresentativeInfoTab from "../representativeInfoTab";
+import RepresentativeInfoTab from "../representativeInfo/representativeInfoTab";
 
 const styles = theme => ({});
 
